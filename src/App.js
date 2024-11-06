@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Products from './components/products/Products/Products';
 import Categories from './components/products/Categories/Categories';
@@ -11,7 +11,7 @@ import Login from './components/Login/Login';
 
 
 function App() {
-    const isAuth = false;
+    const isAuth = localStorage.getItem('password') === "1" ? true : false
 
     return (
         <Router>

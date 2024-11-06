@@ -18,7 +18,7 @@ const Login = () => {
                             Forgot Password?
                         </a>
                     </div>
-                    <button type="submit" className="login-button">
+                    <button onClick={() => localStorage.setItem("password", "1")} type="submit" className="login-button">
                         Login
                     </button>
                     <div className="signup-text">

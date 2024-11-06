@@ -5,7 +5,7 @@ import GME from '../../assets/GM-logo.png'
 
 const Main = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const isAuth = localStorage.getItem("password") === "1" ? true : false;
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);  // Toggle the menu state on click
   };
@@ -42,9 +42,17 @@ const Main = () => {
                 <Link href="#" className="favorite"><i className="fa-regular fa-heart"></i></Link>
                 <Link href="#" className="favorite"><i className="fa-solid fa-cart-shopping"></i></Link>
               </div>
-              <button className="button signup">Sign Up</button>
-              <div className="line"></div>
-              <button className="button login">Log In</button>
+             {!isAuth ? (
+                <>
+                  <button className="button signup">Sign Up</button>
+                  <div className="line"></div>
+                  <button className="button login">Log In</button>
+                </>
+             ) : (
+              <button onClick={() => localStorage.setItem("password", "0")}>
+                  Logout
+              </button>
+             )}
             </div>
 
             {/* Burger menu button */}
