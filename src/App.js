@@ -13,6 +13,7 @@ import Login from './components/Login/Login';
 function App() {
     const isAuth = localStorage.getItem('password') === "1" ? true : false
 
+    
     return (
         <Router>
             <Routes>
