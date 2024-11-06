@@ -1,0 +1,311 @@
+
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #f3f8f6;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    color: black;
+    margin-top: 30px;
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-family: "Noto Sans Georgian", sans-serif;
+  }
+  
+  .paymentOptions {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+  .paymentCard {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    width: 40%;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .paymentCard.active {
+    background-color: #1cc88a;
+    border-color: #1cc88a;
+  }
+  
+  .paymentCard:hover {
+    background-color: #1cc88a;
+    border-color: #1cc88a;
+  }
+  
+  .cardIcon {
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+  
+  .paymentCardTitle {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "Noto Sans Georgian", sans-serif;
+  }
+  
+  .formGroup {
+    margin-bottom: 20px;
+  }
+  
+  .label {
+    display: block; 
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+    color: black;
+  }
+  
+  .input {
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    width: 94%; 
+  }
+  .flexItem .input{
+    width: 88%;
+  }
+  .input:focus {
+    border-color: #1cc88a;
+  }
+  
+  .input::placeholder {
+    color: #999;
+  }
+  
+  .submitButton {
+    padding: 14px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #1cc88a;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .submitButton:hover {
+    background-color: #17a679;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .submitButton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+  
+  .submitButton:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(28, 200, 138, 0.8);
+  }
+  
+  .paypalForm {
+    text-align: center;
+  }
+  
+  .paypalInfo {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .flexRow {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .flexItem {
+    flex: 1; 
+  }
+  
+
+  
+.inputWithIcon {
+    position: relative;
+  }
+  
+  .inputWithIcon .input {
+    padding-right: 10px;
+  }
+  
+  .cvcIcon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px; 
+  }
+
+  .successMessage {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(45deg, #4CAF50, #66BB6A);
+    color: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    animation: slideIn 0.5s forwards, fadeOut 1s forwards 3s;
+    z-index: 9999;
+  }
+  
+  .successContent {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .successIcon {
+    font-size: 2rem;
+    margin-right: 15px;
+  }
+  
+  .successText h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color:white;
+  }
+  
+
+  @keyframes slideIn {
+    from {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  .inputWithIcon {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .inputWithIconField {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .cardIconInsideInput {
+    position: absolute;
+    left: 460px;
+    font-size: 24px;
+    color: #333; 
+    
+  }
+  
+  .inputWithIconField {
+    font-size: 16px;
+    padding-left: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .inputHelp {
+    font-size: 12px;
+    color: #888;
+  }
+  .cardIconInsideInput1 {
+    position: absolute;
+    left: 434px;
+    font-size: 24px;
+    color: #333; 
+    
+  }
+ @media screen and (max-width: 537px) {
+  .cardIconInsideInput {
+    left: auto;
+    right: 10px; 
+  }
+  
+  .cardIconInsideInput1 {
+    left: auto;
+    right:  35px; 
+  }
+  
+  .inputWithIconField {
+    padding-left: 14px;
+    padding-right: 35px; 
+  }
+
+  .cardIconInsideInput,
+  .cardIconInsideInput1 {
+    font-size: 20px; 
+  }
+  .label{
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 429px) {
+  .label{
+    font-size: 10px;
+  }
+  .input{
+    width: 92%;
+    padding: 10px 13px;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .label{
+    font-size: 10px;
+  }
+  .input{
+    width: 90%;
+    padding: 10px 13px;
+  }
+  .flexItem .input{
+    width: 87%;
+  }
+  .submitButton{
+    padding: 10px 20px;
+    font-size: 15px;
+  }
+  .label{
+    font-size: 8px;
+  }
+}
+
