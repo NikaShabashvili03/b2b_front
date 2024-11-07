@@ -8,29 +8,25 @@ import Uploader from './components/products/Uploader/Uploader';
 import Payment from './components/products/Payment/Payment';
 import Main from './components/Main/Main';
 import Login from './components/Login/Login';
-import RegistrationForm from './components/Register/RegistrationForm';
+import { AuthProvider, useAuth } from './context/AuthContext';
 
 
 function App() {
-    const isAuth = localStorage.getItem('password') === "1" ? true : false
+    const { isAuthentifcated } = useAuth();
 
-    
     return (
-        <Router>
-            <Routes>
-                <Route path='/login' element={!isAuth ? <Login/> : <Navigate to={'/'}/>}/>
-                <Route path='/register' element={!isAuth ? <RegistrationForm/> : <Navigate to={'/'}/>}/>
-                <Route element={isAuth ? <Main/> : <Navigate to={'/login'}/>}>
-                    <Route path="/" element={<Categories />} />
-                    <Route path="/Products" element={<Products />} />
-                    <Route path="/Products/:id" element={<div>2</div>} />
-                    <Route path="/Shoppingcart" element={<Shoppingcart/>} />
-                    <Route path="/Staff" element={<Staff/>}/>
-                    <Route path="/Uploader" element ={<Uploader/>}/>
-                    <Route path="/Payment" element={<Payment/>}/>
-                </Route>
-            </Routes>
-        </Router>
+        <Routes>
+            <Route path='/login' element={!isAuthentifcated ? <Login/> : <Navigate to={'/'}/>}/>
+            <Route path='/register' element={!isAuthentifcated ? <div>Register</div> : <Navigate to={'/'}/>}/>
+            <Route element={isAuthentifcated ? <Main/> : <Navigate to={'/login'}/>}>
+                <Route path="/" element={<Categories />} />
+                <Route path="/Products" element={<Products />} />
+                <Route path="/Shoppingcart" element={<Shoppingcart/>} />
+                <Route path="/Staff" element={<Staff/>}/>
+                <Route path="/Uploader" element ={<Uploader/>}/>
+                <Route path="/Payment" element={<Payment/>}/>
+            </Route>
+        </Routes>
     );
 }
 export default App; 

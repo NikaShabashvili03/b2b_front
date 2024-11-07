@@ -58,8 +58,8 @@ const Shoppingcart = () => {
                   onChange={(e) => handleQuantityChange(item.id, Number(e.target.value))}
                   min="1"
                 />
-<button className={styles.deleteButton} onClick={() => removeItem(item.id)}>წაშლა</button>
-</div>
+                <button className={styles.deleteButton} onClick={() => removeItem(item.id)}>წაშლა</button>
+                </div>
             </div>
           ))}
           <div className={styles.total}>

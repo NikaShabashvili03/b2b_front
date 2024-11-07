@@ -39,13 +39,13 @@ body {
 .item {
     width: 250px;
     height: 340px; 
-    margin-top: 90px;
+    margin-top: 20px;
     color: black; 
     border-radius: 15px; 
     border: 2px solid transparent;
     transition: transform 0.3s ease, border-color 0.3s ease; 
     overflow: hidden; 
-    margin-bottom: -100px;
+
     background-color: white;
 }
 
@@ -146,25 +146,23 @@ body {
     position:absolute
 }
 .actionsContainer {
+    height: 40px;
+    width: 100px;
+    border-radius: 10px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    top: 59px; 
-    right: 340px; 
-    z-index: 1000;
+    background-color:#28282d ;
     gap: 20px; 
-    background: transparent;
     border: none;
     color: #f0f0f0;
     cursor: pointer;
     z-index: 1;
     align-items: center;
     justify-content: center;
-    white-space: nowrap;
     user-select: none;
-    position: absolute;
 }
-.actionsContainer::after,
+/* .actionsContainer::after,
 .actionsContainer::before {
     content: '';
     position: absolute;
@@ -205,7 +203,7 @@ body {
 .actionsContainer:active::after {
     transition: 0s;
     transform: translate(0, 5%);
-}
+} */
 
 .dropdown {
     position: relative;
@@ -308,8 +306,8 @@ body {
     width: 100%;
 }
 .sidebar {
-    margin-top: 110px;
-    width: 100px; 
+    margin-top: 60px;
+    width: 200px; 
     padding: 4px 60px; 
     flex-shrink: 0; 
     background: white;
@@ -319,29 +317,56 @@ body {
 }
 .sidebarTitle {
     font-size: 18px;
+    font-style: bolder;
+    font-weight: 900;
     border-bottom: 2px solid gray;
     padding-bottom: 12px; 
     margin-bottom: 11px; 
 }
-.categoryList {
-    list-style: none;
-    padding: 0;
+
+.filtero{
+    margin-bottom: 10px;
+    width: 200px;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    border-radius: 15px;
+    border: none;
+    padding: 5px;
+    text-align: left;
 }
+
+
+
+.categoryList {
+    gap: 10px;
+}
+
+.filterwrapper{
+    display: flex;
+    width: 95%;
+    justify-content: end;
+}
+
+
 .categoryItem {
     margin: 5px 0; 
     cursor: pointer;
     transition: color 0.3s ease;
     color: #333; 
     font-size: 14px;
+    font-weight: bold;
 }
+
 .categoryItem:hover {
-    color: #666; 
+    color: #00000079; 
 }
+
 .active {
     color: black; 
-    font-weight: bold; 
+    font-weight: bolder; 
 }
-.mainContent {
+.mainContent {    
     flex-grow: 1; 
     padding: 20px; 
 }

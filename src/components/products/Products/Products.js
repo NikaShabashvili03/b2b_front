@@ -308,7 +308,7 @@ const Products = () => {
     },
   ];
 
-  const categories = ["კაბელი", "ელექტრო-სამონტაჟო აქსესუარები", "ხელსაწყოები", "ჩამრთველები","გადამრთველი","დამცველის ყუთი","ელექტრო ჩანგალი","გამანაწილებელი ყუთი","მექანიზმი","ნათურები","შიდა განათება"];
+  const categories = ["კაბელი", "სამონტაჟო აქსესუარები", "ხელსაწყოები", "ჩამრთველები","გადამრთველი","დამცველის ყუთი","ელექტრო ჩანგალი","გამანაწილებელი ყუთი","მექანიზმი","ნათურები","შიდა განათება"];
 
   const sortProducts = (option) => {
     const sortedProducts = [...productsData];
@@ -363,7 +363,13 @@ const Products = () => {
       <h2 className={styles.title}>პროდუქტები</h2>
       <div className={styles.content}>
         <div className={styles.sidebar}>
+
+       
+          
           <h3 className={styles.sidebarTitle}>კატეგორია</h3>
+
+          {/* <button className="filtero">filter</button>
+          <button className="cart" onClick={toggleCartVisibility}>cart</button> */}
           <ul className={styles.categoryList}>
             {categories.map((category, index) => (
               <li 
@@ -378,36 +384,26 @@ const Products = () => {
         </div>
 
         <div className={styles.mainContent}>
-          <div className={styles.actionsContainer}>
-            <div className={styles.dropdown}>
-              <button className={styles.dropdownButton}>ფილტრი</button>
-              <ul className={styles.dropdownMenu}>
-                {["თარიღი ზრდადი", "თარიღი კლებადი", "ფასი ზრდადი", "ფასი კლებადი", "ახალი"].map((option) => (
-                  <li key={option}>
-                    <a href="#" onClick={() => handleSortChange(option)}>{option}</a>
-                  </li>
-                ))}
-              </ul>
+
+
+
+        <div className={styles.filterwrapper}>
+            <div className={styles.actionsContainer}>
+              <div className={styles.dropdown}>
+                <button className={styles.dropdownButton}>ფილტრი</button>
+                <ul className={styles.dropdownMenu}>
+                  {["თარიღი ზრდადი", "თარიღი კლებადი", "ფასი ზრდადი", "ფასი კლებადი", "ახალი"].map((option) => (
+                    <li key={option}>
+                      <a href="#" onClick={() => handleSortChange(option)}>{option}</a>
+                    </  li>
+                  ))}
+                </ul>
+              </div>
             </div>
-          </div>
-          <div className={styles.shoppingCart} onClick={toggleCartVisibility}>
-            <RiShoppingCart2Line />
-          </div>
-          {cartVisible && (
-          <div className={styles.cartMenu}>
-            <h3>კალათი</h3>
-            <p>თქვენი კალათი ცარიელია</p>
-            <button className={styles.closeButton} onClick={closeCart}>
-                დახურვა
-              </button>
-              <Link to="/Shoppingcart">
-              <button className={styles.goCart}>
-                კალათაში გადასვლა
-              </button>
-            </Link>
-          </div>
-          )}
-          <div className={styles.list}>
+        </div>
+        
+
+        <div className={styles.list}>
             {displayedProducts.map(product => (
               <div className={styles.item} key={product.id}>
                 <div className={styles.imager}>
