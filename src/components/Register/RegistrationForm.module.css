@@ -34,6 +34,15 @@ h1 {
   margin-bottom: 12px; /* Reduced space between form fields */
 }
 
+.forminput {
+  width: 100%; /* Ensures input takes up full width of the form */
+  padding: 6px; /* Reduced padding for smaller height */
+  font-size: 12px; /* Smaller font size for compactness */
+  border: 1px solid #0c074d;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
 .forminput:focus {
   border-color: #0c074b;
   outline: none;

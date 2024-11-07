@@ -9,6 +9,7 @@ import Payment from './components/products/Payment/Payment';
 import Main from './components/Main/Main';
 import Login from './components/Login/Login';
 import { AuthProvider, useAuth } from './context/AuthContext';
+import RegistrationForm from './components/Register/RegistrationForm';
 
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
     return (
         <Routes>
             <Route path='/login' element={!isAuthentifcated ? <Login/> : <Navigate to={'/'}/>}/>
-            <Route path='/register' element={!isAuthentifcated ? <div>Register</div> : <Navigate to={'/'}/>}/>
+            <Route path='/register' element={!isAuthentifcated ? <RegistrationForm/> : <Navigate to={'/'}/>}/>
             <Route element={isAuthentifcated ? <Main/> : <Navigate to={'/login'}/>}>
                 <Route path="/" element={<Categories />} />
                 <Route path="/Products" element={<Products />} />
