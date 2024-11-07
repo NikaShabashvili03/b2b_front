@@ -46,6 +46,7 @@ const categories = [
 
 const Categories = () => {
     return (
+
         <div className={styles.container}>
             <h1>კატეგორიები</h1>
             <div className={styles.grid}>
