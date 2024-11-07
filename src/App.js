@@ -10,7 +10,10 @@ import Main from './components/Main/Main';
 import Login from './components/Login/Login';
 import { useAuth } from './context/AuthContext';
 import RegistrationForm from './components/Register/RegistrationForm';
-
+import About from './components/About/About';
+import Profile from './components/Profile/Profile'
+import ProductId from './components/ProductId/ProductId';
+import Contact from './components/Contact/Contact';
 
 function App() {
     const { isAuthentifcated } = useAuth();
@@ -22,6 +25,10 @@ function App() {
             <Route element={!isAuthentifcated ? <Main/> : <Navigate to={'/login'}/>}>
                 <Route path="/" element={<Categories />} />
                 <Route path="/Products" element={<Products />} />
+                <Route path='/Products/:id' element={<ProductId/>}/>
+                <Route path="/About" element={<About/>}/>
+                <Route path="/Contact" element={<Contact/>}/>
+                <Route path="/Profile" element={<Profile/>}/>
                 <Route path="/Shoppingcart" element={<Shoppingcart/>} />
                 <Route path="/Staff" element={<Staff/>}/>
                 <Route path="/Uploader" element ={<Uploader/>}/>

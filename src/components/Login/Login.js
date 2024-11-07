@@ -25,9 +25,9 @@ const Login = () => {
                     <div className={styles['input-group']}>
                         <label>Password</label>
                         <input value={email} onChange={(e) => setPassword(e.target.value)} type="password" id="password" name="password" required="" />
-                        <a href="#" className={styles['forgot-password']}>
+                        {/* <a href="#" className={styles['forgot-password']}>
                             Forgot Password?
-                        </a>
+                        </a> */}
                     </div>
                     <button
                         type="submit"
