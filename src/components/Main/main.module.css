@@ -5,10 +5,12 @@
     align-items: center;
     background-color: #383838;
     justify-content: center;
+    position: relative; 
+    z-index: 10;
 }
 
 .container {
-    width: 80%;
+    width: 70%;
 }
 
 .nav-links {
@@ -25,6 +27,14 @@
     gap: 30px;
     list-style-type: none;
     margin-left: 15%;
+    align-items: center;
+}
+
+.links li {
+    height: 50px; /* Increase height of the links for better clickability */
+    display: flex;
+    align-items: center; /* Vertically center the link text */
+    justify-content: center;
 }
 
 .logo {
@@ -35,10 +45,11 @@
     text-decoration: none;
     color: white;
     font-size: 20px;
+    padding: 0 10px;
 }
 
 .links li:hover {
-    scale: 1.1; 
+    scale: 1.1;
     transition: 0.2s;
 }
 
@@ -87,16 +98,6 @@
     transition: 0.2s;
 }
 
-.signup {
-    background-color: #008CBA; /* Green */
-    color: white;
-}
-
-.login {
-    background-color: #008CBA; /* Blue */
-    color: white;
-}
-
 .button:hover {
     background-color: #0078a0;
 }
@@ -115,7 +116,7 @@
     gap: 10px;
 }
 
-.a-container { 
+.a-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -147,23 +148,240 @@ select {
     cursor: pointer;
 }
 
+.profileIcon {
+    width: 57px;
+    height: 35px;
+    background-color: white; 
+    border-radius: 50%;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    transition: 0.2s;
+}
+
+.profileIcon i {
+    font-size: 21px;
+}
+
+.profileIcon:hover {
+    scale: 1.1;
+    background-color: #008CBA; 
+    border-color: #008CBA;
+    color: white;
+}
+
 @media (max-width: 1200px) {
+    .navbar {
+        width: 100%;
+    }
+
     .burger-menu {
         display: block;
     }
 
     .links {
-        position: absolute;
-        top: 80px;
-        right: -300px;
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        width: 30%;
+        max-width: 250px;
         background: #383838;
         flex-direction: column;
         padding: 20px;
-        transition: right 0.3s ease;
+        transition: right 0.3s ease, height 0.3s ease;
         z-index: 10;
+        height: 32%;
+        display: flex;
     }
 
     .show {
         right: 0;
+    }
+
+    .links li {
+        margin: 15px 0;
+        text-align: center;
+        height: auto;
+    }
+
+    .container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 368px) {
+    .navbar {
+        width: 100%;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .links {
+        right: -100%;
+        width: 30%;
+        max-width: 250px;
+        background: #383838;
+        flex-direction: column;
+        padding: 20px;
+        transition: right 0.3s ease, height 0.3s ease;
+        z-index: 10;
+        height: 28%;
+        display: flex;
+    }
+
+    .show {
+        right: 0;
+    }
+
+    .favorite {
+        width: 37px;
+        height: 30px;
+        border-radius: 50%;
+        text-decoration: none;
+        transition: 0.2s;
+        margin-top: 5px;
+    }
+
+    .favorite i {
+        display: flex;
+        justify-content: center;
+        font-size: 17px;
+        margin-top: 8px;
+    }
+
+    .profileIcon {
+        width: 37px;
+        height: 30px;
+        border-radius: 50%;
+        text-decoration: none;
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.2s;
+        margin-top: 5px;
+        margin-right: 25px;
+    }
+
+    .profileIcon i {
+        font-size: 17px;
+    }
+
+    select {
+        width: 40%;
+        padding: 10px;
+        border-radius: 15px;
+        font-size: 13px;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        cursor: pointer;
+        outline: none;
+        margin-right: 10px;
+    }
+
+    #language-select {
+        width: 152px;
+    }
+
+    .burger-menu {
+        margin-left: -20px;
+    }
+}
+
+@media (max-width: 317px) {
+    .navbar {
+        width: 100%;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .links {
+        right: -100%;
+        width: 30%;
+        max-width: 250px;
+        background: #383838;
+        flex-direction: column;
+        padding: 20px;
+        transition: right 0.3s ease, height 0.3s ease;
+        z-index: 10;
+        height: 28%;
+        display: flex;
+    }
+
+    .show {
+        right: 0;
+    }
+
+    .links li {
+        margin: 15px 0;
+        text-align: center;
+        height: auto;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    .favorite {
+        width: 33px;
+        height: 25px;
+        border-radius: 50%;
+        text-decoration: none;
+        transition: 0.2s;
+        margin-top: 4px;
+    }
+
+    .favorite i {
+        display: flex;
+        justify-content: center;
+        font-size: 17px;
+        margin-top: 8px;
+    }
+
+    .profileIcon {
+        width: 33px;
+        height: 25px;
+        border-radius: 50%;
+        text-decoration: none;
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.2s;
+        margin-top: 4px;
+        margin-right: 39px;
+    }
+
+    .profileIcon i {
+        font-size: 17px;
+    }
+
+    select {
+        width: 30%;
+        padding: 10px;
+        border-radius: 15px;
+        font-size: 11px;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        cursor: pointer;
+        outline: none;
+        margin-left: -10px;
+    }
+
+    #language-select {
+        width: 152px;
+    }
+
+    .burger-menu {
+        margin-left: -35px;
     }
 }

@@ -7,7 +7,7 @@ const Main = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isAuth = localStorage.getItem("password") === "1";
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen); // Toggle the menu state on click
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
@@ -41,16 +41,10 @@ const Main = () => {
                   <option value="ru">Russian</option>
                   <option value="ka">Georgian</option>
                 </select>
-                <Link to="#" className={styles.favorite}><i className="fa-regular fa-heart"></i></Link>
                 <Link to="#" className={styles.favorite}><i className="fa-solid fa-cart-shopping"></i></Link>
+                <Link to="/profile" className={styles.profileIcon}><i className="fa-regular fa-user"></i></Link>
               </div>
-              {!isAuth ? (
-                <>
-                  <button className={`${styles.button} ${styles.signup}`}>Sign Up</button>
-                  <div className={styles.line}></div>
-                  <button className={`${styles.button} ${styles.login}`}>Log In</button>
-                </>
-              ) : (
+              {isAuth && (
                 <button onClick={() => localStorage.setItem("password", "0")}>
                   Logout
                 </button>
@@ -65,9 +59,7 @@ const Main = () => {
       </nav>
 
       <div className={styles.cartwrapper}>
-            <div className={styles.cartShown}>
-              
-            </div>
+        <div className={styles.cartShown}></div>
       </div>
 
       <Outlet />
