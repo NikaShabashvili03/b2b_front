@@ -25,7 +25,7 @@ function App() {
             <Route element={!isAuthentifcated ? <Main/> : <Navigate to={'/login'}/>}>
                 <Route path="/" element={<Categories />} />
                 <Route path="/Products" element={<Products />} />
-                <Route path='/Products/:id' element={<ProductId/>}/>
+                <Route path='/Products/:id' element={<Product/>}/>
                 <Route path="/About" element={<About/>}/>
                 <Route path="/Contact" element={<Contact/>}/>
                 <Route path="/Profile" element={<Profile/>}/>
