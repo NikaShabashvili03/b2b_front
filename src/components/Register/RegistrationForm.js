@@ -1,10 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './RegistrationForm.module.css'; // Import the CSS module
+import { useAuth } from '../../context/AuthContext';
 
 const RegistrationForm = () => {
+  const { register } = useAuth();
+  
+  const [data, setData] = useState({
+    company: "",
+    position: "", 
+    indentify: "", 
+    name: "",
+    lastname: "",
+    phone: "", 
+    email: "", 
+    password: "",
+    rePassowrd: ""
+  })
   return (
     <div className={styles.App}> {/* Applying App class from the CSS module */}
-      <form className={styles.registrationform}>
+      <form onSubmit={() => {
+        if(data.password !== data.rePassword) return;
+            register({
+              
+            })
+        }} 
+      className={styles.registrationform}>
         <h2>Sign Up</h2> {/* Title */}
         
         <div className={styles.formgroup}>
@@ -55,7 +75,7 @@ const RegistrationForm = () => {
         <div className={styles.formgroup}>
           <input
             type="email"
-            placeholder="Phone Number"
+            placeholder="Email"
             className={styles.forminput}
             required
           />
