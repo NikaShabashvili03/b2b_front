@@ -1,5 +1,6 @@
 import React from 'react'
 import "./login.css"
+import { Link } from 'react-router-dom'
 
 const Login = () => {
     return (
@@ -23,9 +24,9 @@ const Login = () => {
                     </button>
                     <div className="signup-text">
                         Don't have an account? <span className="signup-gap" />
-                        <a href="#" className="signup-link" style={{ color: "#007BFF" }}>
+                        <Link to={"/Register"} className="signup-link" style={{ color: "#007BFF" }}>
                             Sign up
-                        </a>
+                        </Link>
                     </div>
                 </form>
             </div>

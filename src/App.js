@@ -8,6 +8,7 @@ import Uploader from './components/products/Uploader/Uploader';
 import Payment from './components/products/Payment/Payment';
 import Main from './components/Main/Main';
 import Login from './components/Login/Login';
+import RegistrationForm from './components/Register/RegistrationForm';
 
 
 function App() {
@@ -18,10 +19,11 @@ function App() {
         <Router>
             <Routes>
                 <Route path='/login' element={!isAuth ? <Login/> : <Navigate to={'/'}/>}/>
-                <Route path='/register' element={!isAuth ? <div>Register</div> : <Navigate to={'/'}/>}/>
+                <Route path='/register' element={!isAuth ? <RegistrationForm/> : <Navigate to={'/'}/>}/>
                 <Route element={isAuth ? <Main/> : <Navigate to={'/login'}/>}>
                     <Route path="/" element={<Categories />} />
                     <Route path="/Products" element={<Products />} />
+                    <Route path="/Products/:id" element={<div>2</div>} />
                     <Route path="/Shoppingcart" element={<Shoppingcart/>} />
                     <Route path="/Staff" element={<Staff/>}/>
                     <Route path="/Uploader" element ={<Uploader/>}/>
