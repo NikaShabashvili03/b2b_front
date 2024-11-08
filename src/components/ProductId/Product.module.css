@@ -5,6 +5,7 @@
     align-items: flex-start;
     gap: 50px;
     padding: 30px;
+    height: 100%;
     background-color: #ffffff;
   }
   
@@ -44,7 +45,7 @@
     border: none;
     color: #160e79;
     cursor: pointer;
-    position: absolute;
+    /*  */
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
@@ -125,6 +126,7 @@
     border-radius: 6px;
     cursor: pointer;
     font-size: 18px;
+    position: absolute;
     transition: background-color 0.3s ease;
     margin-top: 30px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

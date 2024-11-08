@@ -62,7 +62,9 @@ const Main = () => {
         <div className={styles.cartShown}></div>
       </div>
 
-      <Outlet />
+      <div>
+        <Outlet />
+      </div>
     </div>
   );
 };

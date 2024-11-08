@@ -12,7 +12,7 @@ import { useAuth } from './context/AuthContext';
 import RegistrationForm from './components/Register/RegistrationForm';
 import About from './components/About/About';
 import Profile from './components/Profile/Profile'
-import ProductId from './components/ProductId/ProductId';
+import Product from './components/ProductId/Product';
 import Contact from './components/Contact/Contact';
 
 function App() {
