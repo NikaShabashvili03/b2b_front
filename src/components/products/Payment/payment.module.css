@@ -17,6 +17,7 @@ body {
     background-color: #fff;
     border: 2px solid #000;
     border-radius: 10px;
+    height: fit-content;
 }
 
 .header {
@@ -147,3 +148,35 @@ body {
     background-color: #fff;
    }
 }
+
+
+.quantityControl {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100px;
+}
+
+.quantityControl button {
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background-color: #f4f4f4;
+    cursor: pointer;
+    font-weight: bold;
+    width: 30px;
+    text-align: center;
+}
+
+.quantityControl button:hover {
+    background-color: #ddd;
+}
+
+.quantityControl span {
+    padding: 0 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Rest of the existing styles... */
