@@ -39,7 +39,7 @@ function InvoiceDownload() {
     doc.text(invoiceData.client.address, 14, 64);
     doc.text(invoiceData.client.cityStateZip, 14, 70);
 
-    // Table for items
+    // Table for items~
     const tableColumn = ["Item", "Description", "Quantity", "Unit Price", "Total"];
     const tableRows = invoiceData.items.map((item) => [
       item.item,

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./payment.module.css";
-
+import ExportToXls from "./ExportToXls"
 const Payment = () => {
     const [quantities, setQuantities] = useState({
         item1: 10,
@@ -27,6 +27,7 @@ const Payment = () => {
 
     return (
         <div className={styles.invoicecontainer}>
+            <ExportToXls />
             <div className={styles.header}>
                 <h1>Invoice</h1>
                 <p>Invoice No: #12345</p>
