@@ -1,6 +1,6 @@
-import React from "react";
-import styles from  "./payment.module.css";
-import ExportToXls from "./ExportToXls"
+import React, { useState } from "react";
+import styles from "./payment.module.css";
+
 const Payment = () => {
     const [quantities, setQuantities] = useState({
         item1: 10,
@@ -10,10 +10,23 @@ const Payment = () => {
     const handleClick = () => {
         alert('Styled Button clicked!');
     };
-  return (
-       
- <div className={styles.invoicecontainer}>
-            <ExportToXls />
+
+    const increaseQuantity = (item) => {
+        setQuantities((prev) => ({
+            ...prev,
+            [item]: prev[item] + 1,
+        }));
+    };
+
+    const decreaseQuantity = (item) => {
+        setQuantities((prev) => ({
+            ...prev,
+            [item]: prev[item] > 1 ? prev[item] - 1 : 1, // Prevent going below 1
+        }));
+    };
+
+    return (
+        <div className={styles.invoicecontainer}>
             <div className={styles.header}>
                 <h1>Invoice</h1>
                 <p>Invoice No: #12345</p>
