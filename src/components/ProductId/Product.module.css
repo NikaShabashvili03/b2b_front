@@ -1,334 +1,349 @@
 /* General Styles for Desktop/Tablets (No changes here) */
 .productContainer {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 50px;
-    padding: 30px;
-    height: 100%;
-    background-color: #ffffff;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  padding: 30px;
+  background-color: #ffffff;
+}
+
+.carousel {
+  position: relative;
+  width: 400px; /* Fixed width for desktop/tablet */
+  height: 470px; /* Fixed height for desktop/tablet */
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.278);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carouselImagesContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carouselImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Changed from contain to cover to zoom in */
+  opacity: 1;
+  transition: opacity 0.6s ease-in-out;
+  cursor: pointer;
+}
+
+.prev {
+  left: 10px;
+  font-size: 30px;
+  background-color: transparent;
+  border: none;
+  color: #160e79;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.next {
+  right: 10px;
+  font-size: 30px;
+  background-color: transparent;
+  border: none;
+  color: #160e79;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.productInfo {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.278);
+  width: 320px;
+  text-align: center;
+}
+
+.productInfo h3 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.productSpecs {
+  margin-bottom: 20px;
+}
+
+.specItem {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.specItem span {
+  color: #333;
+}
+
+/* Price Box with Button */
+.priceBox {
+  background-color: #f2f6ff;
+  padding: 2px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   
-  .carousel {
-    position: relative;
-    width: 400px; /* Fixed width for desktop/tablet */
-    height: 470px; /* Fixed height for desktop/tablet */
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.278);
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
+}
+
+.priceBox h2 {
+  color: #140d75;
+  font-size: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 0px;
+}
+
+/* Button Container to center the button */
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  
+}
+
+.cartButton {
+  background-color: #170f82;
+  color: white;
+  padding: 12px 35px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+  margin-top: 18px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+  
+}
+
+
+.cartButton:hover {
+  background-color: rgba(16, 11, 99, 0.76);
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  position: relative;
+  background-color: white;
+  padding: 25px;
+  border-radius: 15px;
+  max-width: 600px;
+  max-height: 80%;
+}
+
+.modalImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.closeModal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 35px;
+  color: white;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 30px;
+  background-color: transparent;
+  border: none;
+  color: #160e79;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+/* Detailed Info */
+.detailedInfoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  padding: 20px;
+}
+
+.detailedInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.278);
+  width: 830px;
+  text-align: left;
+  margin: 20px auto;
+}
+
+.detailedInfo h3 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 24px;
+  color: #140d75;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.detailedInfo .specItem {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.detailedInfo .specItem span {
+  color: #333;
+}
+
+.detailedInfo .specItem span:first-child {
+  color: #140d75;
+  font-weight: bold;
+  padding-right: 10px;
+}
+
+.detailedInfo .specItem span:last-child {
+  color: #333;
+  flex-grow: 1;
+}
+
+/* Prevent Horizontal Scroll on Mobile */
+body, html {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* Mobile View (max-width: 768px) */
+@media (max-width: 768px) {
+  .productContainer {
+    flex-direction: column;
     align-items: center;
-  }
-  
-  .carouselImagesContainer {
-    position: relative;
+    gap: 20px;
+    padding: 15px;
     width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
-  
+
+  .carousel {
+    width: 90%; /* Make carousel width 90% of the screen */
+    height: 450px; /* Larger height for better display */
+    margin-top: 20px; /* Pull carousel down */
+  }
+
+  .carouselImagesContainer {
+    height: 80%; /* Ensuring the image fits the container without cutting off */
+    width: 100%;
+  }
+
   .carouselImage {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Changed from contain to cover to zoom in */
-    opacity: 1;
-    transition: opacity 0.6s ease-in-out;
-    cursor: pointer;
+    object-fit: cover; /* Ensures the image zooms in a bit */
   }
-  
-  button {
-    font-size: 30px;
-    background-color: transparent;
-    border: none;
-    color: #160e79;
-    cursor: pointer;
-    /*  */
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-  }
-  
-  .prev {
-    left: 10px;
-  }
-  
-  .next {
-    right: 10px;
-  }
-  
+
   .productInfo {
-    background-color: #ffffff;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.278);
-    width: 320px;
-    text-align: center;
+    width: 90%;
+    padding: 20px;
   }
-  
-  .productInfo h3 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  
-  .productSpecs {
-    margin-bottom: 20px;
-  }
-  
-  .specItem {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-    font-size: 16px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  
-  .specItem span {
-    color: #333;
-  }
-  
-  /* Price Box with Button */
+
   .priceBox {
-    background-color: #f2f6ff;
-    padding: 2px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 90%;
   }
-  
-  .priceBox h2 {
-    color: #140d75;
-    font-size: 30px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-bottom: 20px;
-  }
-  
-  /* Button Container to center the button */
-  .buttonContainer {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 55px;
-    width: 100%;
-  }
-  
+
   .cartButton {
-    background-color: #170f82;
-    color: white;
-    padding: 12px 65px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 18px;
-    position: absolute;
-    transition: background-color 0.3s ease;
-    margin-top: 30px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 100%;
-    max-width: 350px;
-    text-align: center;
+    padding: 12px 0;
+    font-size: 16px;
   }
-  
-  .cartButton:hover {
-    background-color: rgba(16, 11, 99, 0.76);
-  }
-  
-  /* Modal Styles */
-  .modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
+}
+
+/* Smaller Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .productContainer {
+    flex-direction: column;
     align-items: center;
-    z-index: 1000;
+    gap: 20px;
+    padding: 10px;
+    width: 100%;
   }
-  
-  .modalContent {
-    position: relative;
-    background-color: white;
-    padding: 25px;
-    border-radius: 15px;
-    max-width: 600px;
-    max-height: 80%;
+
+  .carousel {
+    width: 90%; /* Keep carousel width at 90% of the screen */
+    height: 400px; /* Slightly bigger carousel image */
+    margin-top: 30px;
   }
-  
-  .modalImage {
+
+  .carouselImagesContainer {
+    height: 80%;
+    width: 100%;
+  }
+
+  .carouselImage {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
   }
-  
-  .closeModal {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 35px;
-    color: white;
-    background: transparent;
-    border: none;
-    cursor: pointer;
+
+  .productInfo {
+    width: 90%;
+    padding: 15px;
   }
-  
-  /* Detailed Info */
-  .detailedInfoContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
-    padding: 20px;
-  }
-  
-  .detailedInfo {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.278);
-    width: 830px;
-    text-align: left;
-    margin: 20px auto;
-  }
-  
-  .detailedInfo h3 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 24px;
-    color: #140d75;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  .detailedInfo .specItem {
-    display: flex;
-    justify-content: space-between;
+
+  .priceBox {
+    padding: 10px;
     margin-bottom: 10px;
-    font-size: 16px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 90%;
   }
-  
-  .detailedInfo .specItem span {
-    color: #333;
-  }
-  
-  .detailedInfo .specItem span:first-child {
-    color: #140d75;
-    font-weight: bold;
-    padding-right: 10px;
-  }
-  
-  .detailedInfo .specItem span:last-child {
-    color: #333;
-    flex-grow: 1;
-  }
-  
-  /* Prevent Horizontal Scroll on Mobile */
-  body, html {
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
+
+  .cartButton {
     width: 100%;
+    padding: 12px 0;
+    font-size: 14px;
   }
-  
-  /* Mobile View (max-width: 768px) */
-  @media (max-width: 768px) {
-    .productContainer {
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-      padding: 15px;
-      width: 100%;
-    }
-  
-    .carousel {
-      width: 90%; /* Make carousel width 90% of the screen */
-      height: 450px; /* Larger height for better display */
-      margin-top: 20px; /* Pull carousel down */
-    }
-  
-    .carouselImagesContainer {
-      height: 80%; /* Ensuring the image fits the container without cutting off */
-      width: 100%;
-    }
-  
-    .carouselImage {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; /* Ensures the image zooms in a bit */
-    }
-  
-    .productInfo {
-      width: 90%;
-      padding: 20px;
-    }
-  
-    .priceBox {
-      padding: 10px;
-      margin-bottom: 10px;
-      width: 90%;
-    }
-  
-    .cartButton {
-      width: 100%;
-      padding: 12px 0;
-      font-size: 16px;
-    }
-  }
-  
-  /* Smaller Mobile Devices (max-width: 480px) */
-  @media (max-width: 480px) {
-    .productContainer {
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-      padding: 10px;
-      width: 100%;
-    }
-  
-    .carousel {
-      width: 90%; /* Keep carousel width at 90% of the screen */
-      height: 400px; /* Slightly bigger carousel image */
-      margin-top: 30px;
-    }
-  
-    .carouselImagesContainer {
-      height: 80%;
-      width: 100%;
-    }
-  
-    .carouselImage {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  
-    .productInfo {
-      width: 90%;
-      padding: 15px;
-    }
-  
-    .priceBox {
-      padding: 10px;
-      margin-bottom: 10px;
-      width: 90%;
-    }
-  
-    .cartButton {
-      width: 100%;
-      padding: 12px 0;
-      font-size: 14px;
-    }
-  }
-  
+}

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import styles from './Product.module.css'; 
-import iphone1 from '../../assets/1.jpg';
-import iphone2 from '../../assets/2.jpg';
-import iphone3 from '../../assets/3.jpg';
+import styles from './Product.module.css'; // Import CSS module
+import iphone1 from './assets/iphone1.webp';
+import iphone2 from './assets/iphone2.webp';
+import iphone3 from './assets/iphone3.webp';
 
 const Product = () => {
   const images = [iphone1, iphone2, iphone3];
