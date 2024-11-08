@@ -1,5 +1,6 @@
 import React from "react";
 import styles from  "./payment.module.css";
+import ExportToXls from "./ExportToXls"
 const Payment = () => {
     const handleClick = () => {
         alert('Styled Button clicked!');
@@ -7,7 +8,7 @@ const Payment = () => {
   return (
        
  <div className={styles.invoicecontainer}>
-    
+            <ExportToXls />
             <div className={styles.header}>
                 <h1>Invoice</h1>
                 <p>Invoice No: #12345</p>
