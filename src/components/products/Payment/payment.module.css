@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -93,7 +92,7 @@ body {
 
 
 .Button{
-   /* position: absolute; */
+   position: absolute;
    padding:10px 30px;
    font-size:20px;
    border-radius:20px;
@@ -105,4 +104,46 @@ body {
 
 .Button:hover{
     padding:11px 31px;
+}
+
+
+
+@media (max-width:800px){
+    .invoicecontainer{
+      width:600px;
+    }
+}
+
+@media (max-width:600px){
+    .invoicecontainer{
+        width:500px;
+    }
+   .invoicedetails{
+    width:300px;
+   }
+}
+
+
+@media (max-width:500px){
+   .invoicecontainer{
+    width:450px;
+    height:650px;
+    border:none;
+   }
+   .invoicedetails{
+    width:270px;
+    margin-left:-15px;
+   }
+   .Button{
+    padding:6px 26px;
+    border-radius:18px;
+    margin-top:10px;
+   }
+
+   .footer{
+    margin-top:50px;
+   }
+   body{
+    background-color: #fff;
+   }
 }
