@@ -32,7 +32,7 @@ const Payment = () => {
          
             <table className={styles.invoicedetails}>
                 <thead>
-                    <tr className={styles.one}>
+                    <tr>
                         <th>Item</th>
                         <th>Description</th>
                         <th>Quantity</th>
@@ -64,11 +64,11 @@ const Payment = () => {
     
          
             <div className={styles.amountinwords}>
-                  <p><strong>Amount in Words:</strong> Six hundred twenty dollars and 00/100</p>
+                <p><strong>Amount in Words:</strong> Six hundred twenty dollars and 00/100</p>
             </div>
             <button onClick={handleClick} className={styles.Button}>
-              Sale
-           </button>
+            Sale
+        </button>
       
             <div className={styles.footer}>
                 <p>Thank you for your business!</p>
