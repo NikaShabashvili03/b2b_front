@@ -360,11 +360,8 @@ const Products = () => {
 
   return (
     <div className={styles.container}>
-      <h2 className={styles.title}>პროდუქტები</h2>
       <div className={styles.content}>
         <div className={styles.sidebar}>
-
-       
           
           <h3 className={styles.sidebarTitle}>კატეგორია</h3>
 
