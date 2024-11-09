@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styles from './shoppingcart.module.css';
 import IMG1 from "../../../assets/1707289109360.png";
 import IMG2 from "../../../assets/1713416670393.png";
+import { Link } from 'react-router-dom';
 
 const Shoppingcart = () => {
   const [cartItems, setCartItems] = useState([
@@ -64,7 +65,7 @@ const Shoppingcart = () => {
           ))}
           <div className={styles.total}>
             <h3>სულ: {totalAmount}ლარი</h3>
-            <button className={styles.checkoutButton}>გადახდა</button>
+            <Link to={'/payment'} className={styles.checkoutButton}>გადახდა</Link>
           </div>
         </div>
       )}

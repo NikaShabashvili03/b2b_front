@@ -88,11 +88,12 @@ body {
     cursor: pointer;
     transition: color 0.3s ease;
 }
+
 .name {
     margin-top: 7px;
     font-size: 16px;
     font-weight: bold;
-    padding: 12px; 
+    padding: 12px;
     color: #666666;
 }
 

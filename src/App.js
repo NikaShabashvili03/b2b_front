@@ -24,15 +24,15 @@ function App() {
             <Route path='/register' element={!isAuthentifcated ? <RegistrationForm/> : <Navigate to={'/'}/>}/>
             <Route element={!isAuthentifcated ? <Main/> : <Navigate to={'/login'}/>}>
                 <Route path="/" element={<Categories />} />
-                <Route path="/Products" element={<Products />} />
-                <Route path='/Products/:id' element={<Product/>}/>
-                <Route path="/About" element={<About/>}/>
-                <Route path="/Contact" element={<Contact/>}/>
-                <Route path="/Profile" element={<Profile/>}/>
-                <Route path="/Shoppingcart" element={<Shoppingcart/>} />
-                <Route path="/Staff" element={<Staff/>}/>
-                <Route path="/Uploader" element ={<Uploader/>}/>
-                <Route path="/Payment" element={<Payment/>}/>
+                <Route path="/products" element={<Products />} />
+                <Route path='/products/:id' element={<Product/>}/>
+                <Route path="/about" element={<About/>}/>
+                <Route path="/contact" element={<Contact/>}/>
+                <Route path="/profile" element={<Profile/>}/>
+                <Route path="/cart" element={<Shoppingcart/>} />
+                <Route path="/staff" element={<Staff/>}/>
+                <Route path="/uploader" element ={<Uploader/>}/>
+                <Route path="/payment" element={<Payment/>}/>
             </Route>
         </Routes>
     );

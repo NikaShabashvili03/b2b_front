@@ -26,12 +26,12 @@ const Main = () => {
         <div className={styles.container}>
           <div className={styles['nav-links']}>
             <div className={styles.logo}>
-              <a href="#"><img src={GME} width="65px" height="65px" alt="Logo" /></a>
+              <Link to="/"><img src={GME} width="65px" height="65px" alt="Logo" /></Link>
             </div>
             <ul className={`${styles.links} ${isMenuOpen ? styles.show : ''}`}>
-              <li><a href="/Products">Products</a></li>
-              <li><a href="#contact">Contact</a></li>
-              <li><a href="#about">About Us</a></li>
+              <li><Link to="/products">Products</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
+              <li><Link to="/aboutus">About Us</Link></li>
             </ul>
 
             <div className={styles['b-container']}>
@@ -41,7 +41,7 @@ const Main = () => {
                   <option value="ru">Russian</option>
                   <option value="ka">Georgian</option>
                 </select>
-                <Link to="#" className={styles.favorite}><i className="fa-solid fa-cart-shopping"></i></Link>
+                <Link to="/cart" className={styles.favorite}><i className="fa-solid fa-cart-shopping"></i></Link>
                 <Link to="/profile" className={styles.profileIcon}><i className="fa-regular fa-user"></i></Link>
               </div>
               {isAuth && (

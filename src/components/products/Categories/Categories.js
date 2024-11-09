@@ -53,11 +53,11 @@ const Categories = () => {
                 {categories.map(category => (
                     <div className={styles.card} key={category.id}>
                         <h2>{category.title}</h2>
-                        {category.links.map((link, index) => (
-                            <div key={index}>
-                                <a href={`#${link.toLowerCase().replace(/\s+/g, '-')}`}>{link}</a>
-                            </div>
-                        ))}
+                            {category.links.map((link, index) => (
+                                <div key={index}>
+                                    <Link to={`#${link.toLowerCase().replace(/\s+/g, '-')}`}>{link}</Link>
+                                </div>
+                            ))}
                             <Link to="/products" className={`${styles.viewMoreButton} ${styles.a}`}>View More</Link>
                             <img src={category.image} alt={`Image for ${category.title}`} />
                     </div>

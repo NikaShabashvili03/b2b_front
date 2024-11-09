@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from './RegistrationForm.module.css'; // Import the CSS module
 import { useAuth } from '../../context/AuthContext';
+import { Link } from 'react-router-dom';
 
 const RegistrationForm = () => {
   const { register } = useAuth();
@@ -113,7 +114,7 @@ const RegistrationForm = () => {
         </button>
 
         <p className={styles.logintext}>
-          Already have an account? <a href="/login">Log in</a>
+          Already have an account? <Link to="/login">Log in</Link>
         </p>
       </form>
     </div>

@@ -391,7 +391,7 @@ const Products = () => {
                 <ul className={styles.dropdownMenu}>
                   {["თარიღი ზრდადი", "თარიღი კლებადი", "ფასი ზრდადი", "ფასი კლებადი", "ახალი"].map((option) => (
                     <li key={option}>
-                      <a href="#" onClick={() => handleSortChange(option)}>{option}</a>
+                      <button onClick={() => handleSortChange(option)}>{option}</button>
                     </  li>
                   ))}
                 </ul>
@@ -404,15 +404,17 @@ const Products = () => {
             {displayedProducts.map(product => (
               <div className={styles.item} key={product.id}>
                 <div className={styles.imager}>
-                  <img src={product.imgSrc} alt={product.name} />
-                  <div className={styles.additional}>
-                    <RiShoppingCart2Line className={styles.cartIcon} />
-                  </div>
-                  <div className={styles.serialnumber}>{product.serialNumber}</div>
-                  <div className={styles.name}>
-                    {product.name}
-                    {product.isNew && <span className={styles.newLabel}> ახალი </span>}
-                  </div>
+                  <Link to={`/products/${product.id}`}>
+                    <img src={product.imgSrc} alt={product.name} />
+                    <div className={styles.additional}>
+                      <RiShoppingCart2Line className={styles.cartIcon} />
+                    </div>
+                    <div className={styles.serialnumber}>{product.serialNumber}</div>
+                    <div className={styles.name}>
+                      {product.name}
+                      {product.isNew && <span className={styles.newLabel}> ახალი </span>}
+                    </div>
+                  </Link>
                   <div className={styles.price}>{product.price}</div>
                   <div className={styles.date}>{product.date}</div>
                   <div className={`${styles.stockStatus} ${product.inStock ? styles.inStock : styles.outOfStock}`}>
