@@ -168,7 +168,7 @@ body {
 
 .dropdownMenu {
     position: absolute;
-    top: 82%;
+    top: 105%;
     right: -2%;
     background-color: #292929;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -213,7 +213,7 @@ body {
 }
 
 .cartIcon {
-    font-size: 20px; 
+    font-size: 29px; 
     color: white; 
     background-color: gray; 
     border-radius: 10%; 
@@ -416,43 +416,32 @@ body {
     background-color: #a79595ce; 
   }
 
-/* Media queries for responsive design */
 @media screen and (max-width: 709px) {
     .content {
         flex-direction: column;
     }
 
     .sidebar {
-        width: 50%;
+        width: 320px;
         padding: 4px 20px;
         margin-top: 10px;
-        margin-left: 122px;
+        margin-left: 130px;
     }
-
-    .mainContent {
-        padding: 20px;
-        margin-top: 20px;
-    }
-
     .item {
         width: 60%;
         margin-top: 20px;
-    }
-
-    .shoppingCart {
-        right: 118px;
-        top: 70px;
+        height: 320px;
     }
 
     .actionsContainer {
         top: 4px;
-        right: 154px;
+        right: 74px;
         position: relative;
         z-index: 10;
     }
 
     .actionsContainer {
-        width: 30%;
+        width: 20%;
     }
 
     .list {
@@ -461,165 +450,49 @@ body {
     }
 
     .additional {
-        left: 60px;
+        left: 70px;
+    }
+    .cartIcon{
+        font-size: 30px;
+    }
+    .inStock{
+        font-size: 15px;
+        top:245px;
+    }
+    .outOfStock{
+        font-size: 15px;
+        top:345px;
+    }
+    .date{
+        font-size: 13px;
+        top:279px;
     }
 }
 
-/* Smaller screens (mobile portrait) */
-@media screen and (max-width: 640px) {
-    .content {
-        flex-direction: column;
-    }
 
-    .sidebar {
-        width: 50%;
-        padding: 4px 20px;
-        margin-top: 10px;
-        margin-left: 110px;
-    }
-
-    .mainContent {
-        padding: 20px;
-        margin-top: 20px;
-    }
-
-    .item {
-        width: 53%;
-        margin-top: 20px;
-    }
-
-    .actionsContainer {
-        top: 4px;
-        right: 144px;
-        position: relative;
-        z-index: 10;
-    }
-
-    .actionsContainer {
-        width: 30%;
-    }
-
-    .list {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .additional {
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        bottom: 10px;
-        opacity: 1;
-        left: -40px;
-    }
-}
-
-@media screen and (max-width: 614px) {
-    .content {
-        flex-direction: column;
-    }
-
-    .sidebar {
-        width: 50%;
-        padding: 4px 20px;
-        margin-top: 10px;
-        margin-left: 110px;
-    }
-
-    .mainContent {
-        padding: 20px;
-        margin-top: 20px;
-    }
-
-    .item {
-        width: 53%;
-        margin-top: 20px;
-        margin-left: 30px;
-    }
-
-    .actionsContainer {
-        top: 4px;
-        right: 124px;
-        position: relative;
-        z-index: 10;
-    }
-
-    .actionsContainer {
-        width: 30%;
-    }
-
-    .list {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .additional {
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        bottom: 10px;
-        opacity: 1;
-        left: -40px;
-    }
-}
-
-@media screen and (max-width: 554px) {
-    .actionsContainer{
-        right: 100px;
-    }
-    .item{
-        margin-left: 35px;
-    }
-}
-@media screen and (max-width: 512px) {
-    .actionsContainer{
-        right: 70px;
-    }
-    .item{
-        margin-left: 65px;
-    }
-    .additional{
-        left:-60px;
-    }
-}
-
-@media screen and (max-width: 452px) {
-    .actionsContainer{
-        right: 55px;
-    }
-    .item{
-        margin-left: 85px;
-    }
-    .additional{
-        left:-80px;
-    }
-}
-
-@media screen and (max-width: 409px) {
+@media screen and (max-width: 690px) {
     .sidebar{
-        margin-left: 70px;
+        width: 339px;
+        margin-left:79px;
     }
     .actionsContainer{
-        right: 80px;
+        right: 58px;
+        width: 100px;
     }
     .item{
-        margin-left: 20px;
-        height: 310px; 
-        width: 70%;
+        margin-left: -21px;
+        height: 320px; 
+        width: 340px;
     }
     .additional{
-        left:-50px;
+        left:90px;
         width: 50%;
     }
     .cartIcon{
-        font-size: 15px;
+        font-size: 30px;
     }
     .price{
-        font-size: 15px;
+        font-size: 18px;
     }
     .name{
         font-size: 15px;
@@ -628,159 +501,16 @@ body {
         font-size: 10px;
     }
     .inStock{
-        font-size: 10px;
-        top:250px;
+        font-size: 15px;
+        top:245px;
     }
     .outOfStock{
-        font-size: 10px;
-        top:250px;
+        font-size: 15px;
+        top:345px;
     }
     .date{
-        font-size: 8px;
-        top:270px;
-    }
-    .newLabel{
-        font-size: 10px;
-    }
-
-}
-
-@media screen and (max-width: 409px) {
-    .sidebar{
-        margin-left: 70px;
-    }
-    .actionsContainer{
-        right: 80px;
-    }
-    .item{
-        margin-left: 20px;
-        height: 310px; 
-        width: 70%;
-    }
-    .additional{
-        left:-50px;
-        width: 50%;
-    }
-    .cartIcon{
-        font-size: 15px;
-    }
-    .price{
-        font-size: 15px;
-    }
-    .name{
-        font-size: 15px;
-    }
-    .serialnumber{
-        font-size: 10px;
-    }
-    .inStock{
-        font-size: 10px;
-        top:250px;
-    }
-    .outOfStock{
-        font-size: 10px;
-        top:250px;
-    }
-    .date{
-        font-size: 8px;
-        top:270px;
-    }
-    .newLabel{
-        font-size: 10px;
-    }
-
-}
-
-
-@media screen and (max-width: 345px) {
-    .sidebar{
-        margin-left: 49px;
-    }
-    .actionsContainer{
-        right: 70px;
-    }
-    .item{
-        margin-left: 10px;
-        height: 310px; 
-        width: 75%;
-    }
-    .additional{
-        left:-80px;
-        width: 50%;
-    }
-    .cartIcon{
-        font-size: 15px;
-    }
-    .price{
-        font-size: 15px;
-    }
-    .name{
-        font-size: 15px;
-    }
-    .serialnumber{
-        font-size: 10px;
-    }
-    .inStock{
-        font-size: 10px;
-        top:250px;
-    }
-    .date{
-        font-size: 8px;
-        top:270px;
-    }
-    .newLabel{
-        font-size: 10px;
-    }
-    .categoryItem{
-        font-size: 10px;
-    }
-    .outOfStock{
-        font-size: 10px;
-        top:250px;
-    }
-}
-
-
-
-@media (max-width: 320px) {
-    .sidebar{
-        margin-left: 49px;
-    }
-    .actionsContainer{
-        right: 60px;
-    }
-    .item{
-        margin-left: 10px;
-        height: 310px; 
-        width: 75%;
-    }
-    .additional{
-        left:-80px;
-        width: 50%;
-    }
-    .cartIcon{
-        font-size: 15px;
-    }
-    .price{
-        font-size: 15px;
-    }
-    .name{
-        font-size: 15px;
-    }
-    .serialnumber{
-        font-size: 10px;
-    }
-    .inStock{
-        font-size: 10px;
-        top:250px;
-    }
-    .outOfStock{
-        font-size: 10px;
-        top:250px;
-    }
-    .date{
-        font-size: 8px;
-        top:270px;
+        font-size: 13px;
+        top:279px;
     }
     .newLabel{
         font-size: 10px;
@@ -789,6 +519,487 @@ body {
         font-size: 10px;
     }
     .dropdownButton{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .sidebar{
+        width: 339px;
+        margin-left:79px;
+    }
+    .actionsContainer{
+        right: 58px;
+        width: 100px;
+    }
+    .item{
+        margin-left: -21px;
+        height: 320px; 
+        width: 340px;
+    }
+    .additional{
+        left:90px;
+        width: 50%;
+    }
+    .cartIcon{
+        font-size: 30px;
+    }
+    .price{
+        font-size: 18px;
+    }
+    .name{
+        font-size: 15px;
+    }
+    .serialnumber{
         font-size: 10px;
+    }
+    .inStock{
+        font-size: 15px;
+        top:245px;
+    }
+    .outOfStock{
+        font-size: 15px;
+        top:345px;
+    }
+    .date{
+        font-size: 13px;
+        top:279px;
+    }
+    .newLabel{
+        font-size: 10px;
+    }
+    .categoryItem{
+        font-size: 10px;
+    }
+    .dropdownButton{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 614px) {
+    .sidebar{
+        width: 339px;
+        margin-left:69px;
+    }
+    .actionsContainer{
+        right: 36px;
+        width: 100px;
+    }
+    .item{
+        margin-left: -21px;
+        height: 320px; 
+        width: 340px;
+    }
+    .additional{
+        left:90px;
+        width: 50%;
+    }
+    .cartIcon{
+        font-size: 30px;
+    }
+    .price{
+        font-size: 18px;
+    }
+    .name{
+        font-size: 15px;
+    }
+    .serialnumber{
+        font-size: 10px;
+    }
+    .inStock{
+        font-size: 15px;
+        top:245px;
+    }
+    .outOfStock{
+        font-size: 15px;
+        top:345px;
+    }
+    .date{
+        font-size: 13px;
+        top:279px;
+    }
+    .newLabel{
+        font-size: 10px;
+    }
+    .categoryItem{
+        font-size: 10px;
+    }
+    .dropdownButton{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 554px) {
+    .sidebar{
+        width: 339px;
+        margin-left:44px;
+    }
+    .actionsContainer{
+        right: 15px;
+        width: 100px;
+    }
+    .item{
+        margin-left: -21px;
+        height: 320px; 
+        width: 340px;
+    }
+    .additional{
+        left:90px;
+        width: 50%;
+    }
+    .cartIcon{
+        font-size: 30px;
+    }
+    .price{
+        font-size: 18px;
+    }
+    .name{
+        font-size: 15px;
+    }
+    .serialnumber{
+        font-size: 10px;
+    }
+    .inStock{
+        font-size: 15px;
+        top:245px;
+    }
+    .outOfStock{
+        font-size: 15px;
+        top:345px;
+    }
+    .date{
+        font-size: 13px;
+        top:279px;
+    }
+    .newLabel{
+        font-size: 10px;
+    }
+    .categoryItem{
+        font-size: 10px;
+    }
+    .dropdownButton{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 512px) {
+    .sidebar{
+        width: 339px;
+        margin-left:26px;
+    }
+    .actionsContainer{
+        right: 1px;
+        width: 100px;
+    }
+    .item{
+        margin-left: -21px;
+        height: 320px; 
+        width: 340px;
+    }
+    .additional{
+        left:90px;
+        width: 50%;
+    }
+    .cartIcon{
+        font-size: 30px;
+    }
+    .price{
+        font-size: 18px;
+    }
+    .name{
+        font-size: 15px;
+    }
+    .serialnumber{
+        font-size: 10px;
+    }
+    .inStock{
+        font-size: 15px;
+        top:245px;
+    }
+    .outOfStock{
+        font-size: 15px;
+        top:345px;
+    }
+    .date{
+        font-size: 13px;
+        top:279px;
+    }
+    .newLabel{
+        font-size: 10px;
+    }
+    .categoryItem{
+        font-size: 10px;
+    }
+    .dropdownButton{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 452px) {
+    .sidebar{
+        width: 339px;
+        margin-left:1px;
+    }
+    .actionsContainer{
+        left: 20px;
+        width: 100px;
+    }
+    .item{
+        margin-left: -21px;
+        height: 320px; 
+        width: 340px;
+    }
+    .additional{
+        left:70px;
+        width: 50%;
+    }
+    .cartIcon{
+        font-size: 30px;
+    }
+    .price{
+        font-size: 18px;
+    }
+    .name{
+        font-size: 15px;
+    }
+    .serialnumber{
+        font-size: 10px;
+    }
+    .inStock{
+        font-size: 15px;
+        top:245px;
+    }
+    .outOfStock{
+        font-size: 15px;
+        top:345px;
+    }
+    .date{
+        font-size: 13px;
+        top:279px;
+    }
+    .newLabel{
+        font-size: 10px;
+    }
+    .categoryItem{
+        font-size: 10px;
+    }
+    .dropdownButton{
+        font-size: 15px;
+    }
+}
+
+
+
+@media screen and (max-width: 409px) {
+    .sidebar{
+        width: 319px;
+        margin-left:1px;
+    }
+    .actionsContainer{
+        left: 20px;
+        width: 100px;
+    }
+    .item{
+        margin-left: -21px;
+        height: 320px; 
+        width: 320px;
+    }
+    .additional{
+        left:50px;
+        width: 50%;
+    }
+    .cartIcon{
+        font-size: 30px;
+    }
+    .price{
+        font-size: 18px;
+    }
+    .name{
+        font-size: 15px;
+    }
+    .serialnumber{
+        font-size: 10px;
+    }
+    .inStock{
+        font-size: 15px;
+        top:245px;
+    }
+    .outOfStock{
+        font-size: 15px;
+        top:345px;
+    }
+    .date{
+        font-size: 13px;
+        top:279px;
+    }
+    .newLabel{
+        font-size: 10px;
+    }
+    .categoryItem{
+        font-size: 10px;
+    }
+    .dropdownButton{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 345px) {
+    .sidebar{
+        width: 270px;
+        margin-left:1px;
+    }
+    .actionsContainer{
+        left: 19px;
+        width: 100px;
+    }
+    .item{
+        margin-left: -21px;
+        height: 340px; 
+        width: 270px;
+    }
+    .additional{
+        left:12px;
+        width: 50%;
+    }
+    .cartIcon{
+        font-size: 26px;
+    }
+    .price{
+        font-size: 18px;
+    }
+    .name{
+        font-size: 15px;
+    }
+    .serialnumber{
+        font-size: 10px;
+    }
+    .inStock{
+        font-size: 15px;
+        top:260px;
+    }
+    .outOfStock{
+        font-size: 15px;
+        top:260px;
+    }
+    .date{
+        font-size: 13px;
+        top:290px;
+    }
+    .newLabel{
+        font-size: 10px;
+    }
+    .categoryItem{
+        font-size: 10px;
+    }
+    .dropdownButton{
+        font-size: 15px;
+    }
+}
+
+
+@media (max-width: 320px) {
+    .sidebar{
+        width: 250px;
+        margin-left:1px;
+    }
+    .actionsContainer{
+        left: 19px;
+        width: 100px;
+    }
+
+    .item{
+        margin-left: -21px;
+        height: 340px; 
+        width: 250px;
+    }
+    .additional{
+        left:1px;
+        width: 50%;
+    }
+    .cartIcon{
+        font-size: 26px;
+    }
+    .price{
+        font-size: 18px;
+    }
+    .name{
+        font-size: 15px;
+    }
+    .serialnumber{
+        font-size: 10px;
+    }
+    .inStock{
+        font-size: 15px;
+        top:260px;
+    }
+    .outOfStock{
+        font-size: 15px;
+        top:260px;
+    }
+    .date{
+        font-size: 13px;
+        top:290px;
+    }
+    .newLabel{
+        font-size: 10px;
+    }
+    .categoryItem{
+        font-size: 10px;
+    }
+    .dropdownButton{
+        font-size: 15px;
+    }
+}
+
+
+@media (max-width: 286px) {
+    .sidebar{
+        width: 250px;
+        margin-left:-10px;
+    }
+    .actionsContainer{
+        left: 29px;
+        width: 100px;
+    }
+    .item{
+        margin-left: -31px;
+        height: 340px; 
+        width: 250px;
+    }
+    .additional{
+        left:1px;
+        width: 50%;
+    }
+    .cartIcon{
+        font-size: 26px;
+    }
+    .price{
+        font-size: 18px;
+    }
+    .name{
+        font-size: 15px;
+    }
+    .serialnumber{
+        font-size: 10px;
+    }
+    .inStock{
+        font-size: 15px;
+        top:260px;
+    }
+    .outOfStock{
+        font-size: 15px;
+        top:260px;
+    }
+    .date{
+        font-size: 13px;
+        top:290px;
+    }
+    .newLabel{
+        font-size: 10px;
+    }
+    .categoryItem{
+        font-size: 10px;
+    }
+    .dropdownButton{
+        font-size: 15px;
     }
 }
