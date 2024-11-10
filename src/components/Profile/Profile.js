@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import styles from './Profile.module.css';
-import personalProfilePhoto from './assets/kvercxi 1.jpg';
-import companyProfilePhoto from './assets/Gm.png';
-import penIcon from './assets/pen-solid.svg';
-import cameraIcon from './assets/camera-solid.svg';
+import personalProfilePhoto from '../../assets/kvercxi 1.jpg';
+import companyProfilePhoto from '../../assets/Gm.png';
+import penIcon from '../../assets/pen-solid.svg';
+import cameraIcon from '../../assets/camera-solid.svg';
 
 function Profile() {
   const [selectedCategory, setSelectedCategory] = useState('profile');

@@ -10,7 +10,7 @@ import Main from './components/Main/Main';
 import Login from './components/Login/Login';
 import { useAuth } from './context/AuthContext';
 import RegistrationForm from './components/Register/RegistrationForm';
-import About from './components/About/About';
+import About from './components/About/AboutUs';
 import Profile from './components/Profile/Profile'
 import Product from './components/ProductId/Product';
 import Contact from './components/Contact/Contact';
