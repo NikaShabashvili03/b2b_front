@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from './Profile.module.css';
+import styles from './profile.module.css';
 import personalProfilePhoto from '../../assets/kvercxi 1.jpg';
 import companyProfilePhoto from '../../assets/Gm.png';
 import penIcon from '../../assets/pen-solid.svg';
