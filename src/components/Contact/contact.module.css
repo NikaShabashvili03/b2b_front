@@ -1,0 +1,3173 @@
+body{
+    margin:0;
+    background-color: rgb(189, 189, 189);
+    
+}
+
+
+.contactpage{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:wrap;
+}
+.contactnavbar{
+ background-color: #efefef;
+ position:relative;
+ width:100%;
+ height:400px;
+}
+
+.navbarlogo{
+    position:absolute;
+    font-size:25px;
+    font-weight:700;
+    font-family: "Montserrat", sans-serif;
+    margin-left:40px;
+    margin-top:30px;
+}
+
+.color1{
+    color:orangered;
+}
+
+.navbartitle{
+    position:absolute;
+    font-size:35px;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    margin-left:650px;
+    margin-top:150px;
+}
+
+.navbartext{
+    width:600px;
+    height:40px;
+    font-size:17px;
+    font-weight:500;
+    font-family: "Montserrat", sans-serif;
+    margin-left:500px;
+    margin-top:270px;
+line-height: 28px;
+}
+
+
+.mainpage{
+    background-color: #eaeaea;
+    width:100%;
+    height:700px;
+}
+
+
+.maintitle{
+    position: absolute;
+    font-size:30px;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+   margin-top:100px;
+   margin-left:300px;
+}
+
+.maintext{
+    position: absolute;
+    width:350px;
+    font-size:18px;
+    font-weight:400;
+    font-family: "Montserrat", sans-serif;
+    color: #3b3b3b;
+    margin-left:300px;
+    margin-top:180px;
+}
+.addresstitle{
+    position:absolute;
+    font-size:16px;
+    font-weight:700;
+    font-family: "Montserrat", sans-serif;
+    margin-left:350px;
+    margin-top:300px;
+}
+
+.addressicon{
+    width:40px;
+    height:40px;
+    border-radius:50px;
+    background-color: orangered;
+    color:white;
+    font-size:20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    margin-left:300px;
+    margin-top:300px;
+}
+
+.addresstext{
+    position: absolute;
+    font-size:16px;
+    font-weight:400;
+    font-family: "Montserrat", sans-serif;
+    margin-left:350px;
+    margin-top:320px;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+}
+
+
+.numbertitle{
+    position:absolute;
+    font-size:16px;
+    font-weight:700;
+    font-family: "Montserrat", sans-serif;
+    margin-left:350px;
+    margin-top:380px;
+}
+
+.numbertext{
+    position: absolute;
+    font-size:16px;
+    font-weight:400;
+    font-family: "Montserrat", sans-serif;
+    margin-top:400px;
+    margin-left:350px;
+}
+
+.numbericon{
+    width:40px;
+    height:40px;
+    border-radius:50px;
+    background-color: orangered;
+    color:white;
+    font-size:20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    margin-left:300px;
+    margin-top:380px;
+}
+
+.emailtitle{
+    position:absolute;
+    font-size:16px;
+    font-weight:700;
+    font-family: "Montserrat", sans-serif;
+    margin-top:450px;
+    margin-left:350px;
+
+}
+
+.emailicon{
+    width:40px;
+    height:40px;
+    border-radius:50px;
+    background-color: orangered;
+    color:white;
+    font-size:20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    margin-top:450px;
+    margin-left:300px;
+}
+
+.emailtext{
+    position: absolute;
+    font-size:16px;
+    font-weight:400;
+    font-family: "Montserrat", sans-serif;
+    margin-top:470px;
+    margin-left:350px;
+
+}
+
+.contactcard{
+    width:450px;
+    height:450px;
+    border-radius:40px;
+    background-color: #fff;
+    position: relative;
+    margin-left:700px;
+    margin-top:100px;
+}
+
+.usernameinput{
+    position:absolute;
+    margin-top:10px;
+    border-left:#3b3b3b;
+    border-right:#3b3b3b;
+    border-top:#3b3b3b;
+    border-bottom:1px solid rgb(36, 32, 32);
+    width:200px;
+    height:30px;
+    font-family: "Montserrat", sans-serif;
+    margin-left:70px;
+    margin-top:100px;
+    font-size:16px;
+
+}
+
+.cardtitle{
+    font-size:30px;
+    font-weight:600;
+    font-family: "Montserrat", sans-serif;
+   position: absolute;
+   margin-left:40px;
+   margin-top:30px;
+}
+
+
+.usernameinput2{
+
+    position:absolute;
+    margin-top:10px;
+    border-left:#3b3b3b;
+    border-right:#3b3b3b;
+    border-top:#3b3b3b;
+    border-bottom:1px solid rgb(36, 32, 32);
+    width:300px;
+    height:30px;
+    font-family: "Montserrat", sans-serif;
+    margin-left:70px;
+    margin-top:160px;
+    font-size:16px;
+}
+
+.textarea{
+    border:none;
+    border-bottom:1px solid rgb(50, 48, 48);
+    position:absolute;
+    width:300px;
+    height:80px;
+    margin-left:70px;
+    margin-top:210px;
+    font-size:16px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.cardtext{
+    font-family: "Montserrat", sans-serif;
+    position: absolute;
+    font-size:12px;
+    width:350px;
+    margin-left:50px;
+    margin-top:320px;
+}
+
+.cardbutton{
+    padding:15px 35px;    font-size:16px;
+    border:none;
+    border-radius:20px;
+    color:white;
+    background-color: orangered;
+
+    font-family: "Montserrat", sans-serif;
+    position: absolute;
+    margin-left:260px;
+    margin-top:370px;
+    
+}
+
+.cardbutton:hover{
+    background-color:orange;
+    cursor: pointer;
+}
+
+.follow{
+    font-size:20px;
+    font-weight:700;
+    position:absolute;
+    font-family: "Montserrat", sans-serif;
+    margin-left:300px;
+
+}
+
+.facebook, .twitter, .youtube, .instagram{
+    width:40px;
+    height:40px;
+    border-radius:50px;
+    font-size:20px;
+    background-color: orangered;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    position: absolute;
+    flex-direction: column;
+}
+
+ .facebook{
+  margin-left:300px;
+  margin-top:30px;
+}
+
+ .twitter{
+    margin-left:350px;
+    margin-top:30px;
+} 
+.youtube{
+  margin-left:400px;
+    margin-top:30px;
+}
+
+.instagram{
+   margin-top:30px;
+   margin-left:450px;
+}
+.facebook:hover{
+    background-color: orange;
+}
+.twitter:hover{
+    background-color: orange;
+}
+.youtube:hover{
+    background-color: orange;
+
+}
+.instagram:hover{
+    background-color: orange;
+}
+.footer{
+    width:100%;
+    height:300px;
+}
+
+.footerlogo{
+    position:absolute;
+    font-size:25px;
+    font-weight:700;
+    font-family: "Montserrat", sans-serif;
+    margin-top:30px;
+    margin-left:40px;
+}
+
+.color2{
+    color:orangered;
+}
+
+.footertext{
+    width:300px;
+    font-family: "Montserrat", sans-serif;
+    font-size:15px;
+    font-weight:400;
+    position: absolute;
+    margin-left:40px;
+    margin-top:80px;
+}
+
+.footeremail{
+    position: absolute;
+    font-family: "Montserrat", sans-serif;
+    font-size:15px;
+    font-weight:400;
+    margin-left:40px;
+    margin-top:150px;
+}
+
+
+.features{
+    position: absolute;
+    font-size:16px;
+    font-weight:600;
+    font-family: "Montserrat", sans-serif;
+    margin-top:30px;
+    margin-left:400px;
+}
+
+.resourses{
+    margin-left:650px;
+    position: absolute;
+    font-size:16px;
+    font-weight:600;
+    font-family: "Montserrat", sans-serif;
+    margin-top:30px;
+    gap: 20px;
+
+}
+
+.company{
+    margin-left:900px;
+    position: absolute;
+    font-size:16px;
+    font-weight:600;
+    font-family: "Montserrat", sans-serif;
+    margin-top:30px;
+   gap: 20px;
+}
+
+.bm{
+    position: absolute;
+    font-size:14px;
+    font-weight:400;
+    font-family: "Montserrat", sans-serif;
+    margin-left:400px;
+    margin-top:80px;
+}
+
+.two{
+   margin-top:110px;
+   position: absolute;
+   font-size:14px;
+   font-weight:400;
+   font-family: "Montserrat", sans-serif;
+   margin-left:400px;
+}
+
+.three{
+    margin-top:140px;
+    position: absolute;
+    font-size:14px;
+    font-weight:400;
+    font-family: "Montserrat", sans-serif;
+    margin-left:400px;
+}
+
+.four{
+    margin-top:170px;
+    position: absolute;
+    font-size:14px;
+    font-weight:400;
+    font-family: "Montserrat", sans-serif;
+    margin-left:400px;
+}
+
+.five{
+    margin-left:650px;
+    position: absolute;
+    font-size:14px;
+    font-weight:400;
+    font-family: "Montserrat", sans-serif;
+    margin-top:80px;
+}
+
+.six{
+    margin-left: 650px;
+    margin-top:110px;
+    position: absolute;
+    font-size:14px;
+    font-weight:400;
+    font-family: "Montserrat", sans-serif;
+  
+}
+
+
+.seven{
+    margin-left: 650px;
+    margin-top:140px;
+    position: absolute;
+    font-size:14px;
+    font-weight:400;
+    font-family: "Montserrat", sans-serif;
+  
+}
+
+.eight{
+    margin-left: 650px;
+    margin-top:170px;
+    position: absolute;
+    font-size:14px;
+    font-weight:400;
+    font-family: "Montserrat", sans-serif;
+  
+
+}
+
+
+
+
+.nine{
+    margin-left:900px;
+    position: absolute;
+    font-size:14px;
+    font-weight:400;
+    font-family: "Montserrat", sans-serif;
+    margin-top:80px;
+}
+
+.ten{
+    margin-left:900px;
+    margin-top:110px;
+    position: absolute;
+    font-size:14px;
+    font-weight:400;
+    font-family: "Montserrat", sans-serif;
+  
+}
+
+.eleven{
+    margin-left:900px;
+    margin-top:140px;
+    position: absolute;
+    font-size:14px;
+    font-weight:400;
+    font-family: "Montserrat", sans-serif;
+   
+}
+
+.twelve{
+    margin-left:900px;
+    margin-top:170px;
+    position: absolute;
+    font-size:14px;
+    font-weight:400;
+    font-family: "Montserrat", sans-serif;
+
+}
+ 
+.link1{
+    text-decoration: none;
+    color:black;
+}
+
+.link1:hover{
+    text-decoration: underline;
+    border-bottom:1px solid black;
+}
+
+.copyright{
+    width:100%;
+    height:50px;
+    position: relative;
+    background-color: orangered;
+}
+
+.copyrighttext{
+    font-family: "Montserrat", sans-serif;
+    font-size:16px;
+    font-weight:400;
+    margin-top:20px;
+    margin-left:20px;
+}
+
+
+@media (max-width:1285px) {
+    body{
+        width:1270px;
+    }
+
+    .navbartitle{
+        margin-left:600px;
+    }
+}
+
+
+@media (max-width:1170px) {
+    .navbartitle{
+        margin-left:550px;
+ 
+    }
+    .navbartext{
+        margin-left:400px;
+    }
+
+    .maintitle{
+        margin-left:200px;
+    }
+    .maintext{
+        margin-left:200px;
+    }
+    .addresstitle{
+        margin-left:250px;
+    }
+    .addressicon{
+       margin-left:200px;
+    }
+    .addresstext{
+        margin-left:250px;
+    }
+
+
+
+    .numbertitle{
+        margin-left:250px;
+    }
+    .numbericon{
+       margin-left:200px;
+    }
+    .numbertext{
+        margin-left:250px;
+    }
+
+
+    .emailtitle{
+        margin-left:250px;
+    }
+    .emailicon{
+       margin-left:200px;
+    }
+    .emailtext{
+        margin-left:250px;
+    }
+    .contactcard{
+        margin-left:600px;
+    }
+
+    .follow{
+        margin-left:200px;
+    }
+
+    .facebook{
+     margin-left:200px;
+    }
+
+    .twitter{
+    margin-left:250px;
+    }
+
+    .youtube{
+   margin-left:300px;
+    }
+    .instagram{
+     margin-left:350px;
+    }
+}
+
+
+@media (max-width:1100px){
+    .navbartitle{
+        margin-left:500px;
+    }
+    .navbartext{
+        margin-left:350px;
+    }
+
+
+
+
+
+
+    .maintitle{
+        margin-left:150px;
+    }
+    .maintext{
+        margin-left:150px;
+    }
+    .addresstitle{
+        margin-left:200px;
+    }
+    .addressicon{
+       margin-left:150px;
+    }
+    .addresstext{
+        margin-left:200px;
+    }
+
+
+
+    .numbertitle{
+        margin-left:200px;
+    }
+    .numbericon{
+       margin-left:150px;
+    }
+    .numbertext{
+        margin-left:200px;
+    }
+
+
+    .emailtitle{
+        margin-left:200px;
+    }
+    .emailicon{
+       margin-left:150px;
+    }
+    .emailtext{
+        margin-left:200px;
+    }
+    .contactcard{
+        margin-left:550px;
+    }
+
+    .follow{
+        margin-left:150px;
+    }
+
+    .facebook{
+     margin-left:150px;
+    }
+
+    .twitter{
+    margin-left:200px;
+    }
+
+    .youtube{
+   margin-left:250px;
+    }
+    .instagram{
+     margin-left:300px;
+    }
+
+    .bm{
+        margin-left:360px;
+    }
+    .two{
+        margin-left:360px;
+
+    }
+    .three{
+        margin-left:360px;
+
+    }
+    .four{
+        margin-left:360px;
+
+    }
+    .features{
+        margin-left:360px;
+
+    }
+    .five{
+        margin-left:610px;
+    }
+    .six{
+        margin-left:610px;
+
+    }
+    .seven{
+        margin-left:610px;
+
+    }
+    .eight{
+        margin-left:610px;
+
+    }
+    .resourses{
+        margin-left:610px;
+
+    }
+    .nine{
+        margin-left:860px;
+    }
+    .ten{
+        margin-left:860px;
+    }
+    .eleven{
+        margin-left:860px;
+
+    }
+    .twelve{
+        margin-left:860px;
+
+    }
+    .company{
+        margin-left:860px;
+
+    }
+}
+
+@media (max-width:1080px){
+
+    .navbartitle{
+        margin-left:490px;
+    }
+    .navbartext{
+        margin-left:340px;
+    }
+
+
+
+
+
+
+    .maintitle{
+        margin-left:140px;
+    }
+    .maintext{
+        margin-left:140px;
+    }
+    .addresstitle{
+        margin-left:190px;
+    }
+    .addressicon{
+       margin-left:140px;
+    }
+    .addresstext{
+        margin-left:190px;
+    }
+
+
+
+    .numbertitle{
+        margin-left:190px;
+    }
+    .numbericon{
+       margin-left:140px;
+    }
+    .numbertext{
+        margin-left:190px;
+    }
+
+
+    .emailtitle{
+        margin-left:190px;
+    }
+    .emailicon{
+       margin-left:140px;
+    }
+    .emailtext{
+        margin-left:190px;
+    }
+    .contactcard{
+        margin-left:540px;
+    }
+
+    .follow{
+        margin-left:140px;
+    }
+
+    .facebook{
+     margin-left:140px;
+    }
+
+    .twitter{
+    margin-left:190px;
+    }
+
+    .youtube{
+   margin-left:240px;
+    }
+    .instagram{
+     margin-left:290px;
+    }
+
+    .bm{
+        margin-left:350px;
+    }
+    .two{
+        margin-left:350px;
+
+    }
+    .three{
+        margin-left:350px;
+
+    }
+    .four{
+        margin-left:350px;
+
+    }
+    .features{
+        margin-left:350px;
+
+    }
+    .five{
+        margin-left:600px;
+    }
+    .six{
+        margin-left:600px;
+
+    }
+    .seven{
+        margin-left:600px;
+
+    }
+    .eight{
+        margin-left:600px;
+
+    }
+    .resourses{
+        margin-left:600px;
+
+    }
+    .nine{
+        margin-left:850px;
+    }
+    .ten{
+        margin-left:850px;
+    }
+    .eleven{
+        margin-left:850px;
+
+    }
+    .twelve{
+        margin-left:850px;
+
+    }
+    .company{
+        margin-left:850px;
+
+    }
+    .footerlogo{
+        font-size:23px;
+    }
+}
+
+
+@media (max-width:1070px){
+    .footerlogo{
+        font-size:21px;
+    }
+    .footertext{
+        font-size:13px;
+        width:250px;
+    }
+
+
+
+
+
+    .navbartitle{
+        margin-left:480px;
+    }
+    .navbartext{
+        margin-left:330px;
+    }
+
+
+
+
+
+
+    .maintitle{
+        margin-left:130px;
+    }
+    .maintext{
+        margin-left:130px;
+    }
+    .addresstitle{
+        margin-left:180px;
+    }
+    .addressicon{
+       margin-left:130px;
+    }
+    .addresstext{
+        margin-left:180px;
+    }
+
+
+
+    .numbertitle{
+        margin-left:180px;
+    }
+    .numbericon{
+       margin-left:130px;
+    }
+    .numbertext{
+        margin-left:180px;
+    }
+
+
+    .emailtitle{
+        margin-left:180px;
+    }
+    .emailicon{
+       margin-left:130px;
+    }
+    .emailtext{
+        margin-left:180px;
+    }
+    .contactcard{
+        margin-left:530px;
+    }
+
+    .follow{
+        margin-left:130px;
+    }
+
+    .facebook{
+     margin-left:130px;
+    }
+
+    .twitter{
+    margin-left:180px;
+    }
+
+    .youtube{
+   margin-left:230px;
+    }
+    .instagram{
+     margin-left:280px;
+    }
+
+    .bm{
+        margin-left:340px;
+    }
+    .two{
+        margin-left:340px;
+
+    }
+    .three{
+        margin-left:340px;
+
+    }
+    .four{
+        margin-left:340px;
+
+    }
+    .features{
+        margin-left:340px;
+
+    }
+    .five{
+        margin-left:590px;
+    }
+    .six{
+        margin-left:590px;
+
+    }
+    .seven{
+        margin-left:590px;
+
+    }
+    .eight{
+        margin-left:590px;
+
+    }
+    .resourses{
+        margin-left:590px;
+
+    }
+    .nine{
+        margin-left:840px;
+    }
+    .ten{
+        margin-left:840px;
+    }
+    .eleven{
+        margin-left:840px;
+
+    }
+    .twelve{
+        margin-left:840px;
+
+    }
+    .company{
+        margin-left:840px;
+
+    }
+   
+}
+
+@media (max-width:1060px){
+
+    .footerlogo{
+        font-size:21px;
+    }
+    .footertext{
+        font-size:13px;
+        width:250px;
+    }
+
+
+
+
+
+    .navbartitle{
+        margin-left:470px;
+    }
+    .navbartext{
+        margin-left:320px;
+    }
+
+
+
+
+
+
+    .maintitle{
+        margin-left:120px;
+    }
+    .maintext{
+        margin-left:120px;
+    }
+    .addresstitle{
+        margin-left:170px;
+    }
+    .addressicon{
+       margin-left:120px;
+    }
+    .addresstext{
+        margin-left:170px;
+    }
+
+
+
+    .numbertitle{
+        margin-left:170px;
+    }
+    .numbericon{
+       margin-left:120px;
+    }
+    .numbertext{
+        margin-left:170px;
+    }
+
+
+    .emailtitle{
+        margin-left:170px;
+    }
+    .emailicon{
+       margin-left:120px;
+    }
+    .emailtext{
+        margin-left:170px;
+    }
+    .contactcard{
+        margin-left:500px;
+    }
+
+    .follow{
+        margin-left:120px;
+    }
+
+    .facebook{
+     margin-left:120px;
+    }
+
+    .twitter{
+    margin-left:170px;
+    }
+
+    .youtube{
+   margin-left:220px;
+    }
+    .instagram{
+     margin-left:270px;
+    }
+
+    .bm{
+        margin-left:330px;
+    }
+    .two{
+        margin-left:330px;
+
+    }
+    .three{
+        margin-left:330px;
+
+    }
+    .four{
+        margin-left:330px;
+
+    }
+    .features{
+        margin-left:330px;
+
+    }
+    .five{
+        margin-left:580px;
+    }
+    .six{
+        margin-left:580px;
+
+    }
+    .seven{
+        margin-left:580px;
+
+    }
+    .eight{
+        margin-left:580px;
+
+    }
+    .resourses{
+        margin-left:580px;
+
+    }
+    .nine{
+        margin-left:830px;
+    }
+    .ten{
+        margin-left:830px;
+    }
+    .eleven{
+        margin-left:830px;
+
+    }
+    .twelve{
+        margin-left:830px;
+
+    }
+    .company{
+        margin-left:830px;
+
+    }
+}
+
+
+@media(max-width:1050px){
+    
+
+
+
+    
+    .footerlogo{
+        font-size:21px;
+    }
+
+
+    .footertext{
+        font-size:13px;
+        width:250px;
+        
+    }
+    .contactcard{
+        margin-left:490px;
+    }
+
+    .navbartitle{
+        margin-left:450px;
+    }
+
+    .navbartext{
+        margin-left:300px;
+    }
+
+     .maintitle{
+        margin-left:110px;
+    }
+
+    .maintext{
+        margin-left:110px;
+    }
+
+    .addresstitle{
+        margin-left:160px;
+    }
+
+    .addressicon{
+       margin-left:110px;
+    }
+
+    .addresstext{
+        margin-left:160px;
+    }
+
+     .numbertitle{
+        margin-left:160px;
+    }
+
+    .numbericon{
+       margin-left:110px;
+    }
+
+    .numbertext{
+        margin-left:160px;
+    }
+
+    .emailtitle{
+        margin-left:160px;
+    }
+
+    .emailicon{
+       margin-left:110px;
+    }
+
+    .emailtext{
+        margin-left:160px;
+    }
+
+    .contactcard{
+        margin-left:510px;
+    }
+
+    .follow{
+        margin-left:110px;
+    }
+
+    .facebook{
+     margin-left:110px;
+    }
+
+    .twitter{
+    margin-left:160px;
+    }
+
+    .youtube{
+   margin-left:210px;
+    }
+    .instagram{
+     margin-left:260px;
+    }
+
+    .bm{
+        margin-left:320px;
+    }
+    .two{
+        margin-left:320px;
+
+    }
+    .three{
+        margin-left:320px;
+
+    }
+    .four{
+        margin-left:320px;
+
+    }
+    .features{
+         margin-left:320px;
+
+    }
+       
+
+    .five{
+        margin-left:570px;
+    }
+    .six{
+        margin-left:570px;
+
+    }
+    .seven{
+        margin-left:570px;
+
+    }
+    .eight{
+        margin-left:570px;
+
+    }
+    .resourses{
+        margin-left:570px;
+
+    }
+    .nine{
+        margin-left:820px;
+    }
+    .ten{
+        margin-left:820px;
+    }
+    .eleven{
+        margin-left:820px;
+
+    }
+    .twelve{
+        margin-left:820px;
+
+    }
+    .company{
+        margin-left:820px;
+    }
+}
+        
+@media (max-width:1040px){
+    
+
+    .footerlogo{
+        font-size:21px;
+    }
+    .footertext{
+        font-size:13px;
+        width:250px;
+    }
+
+
+
+
+
+    .navbartitle{
+        margin-left:470px;
+    }
+    .navbartext{
+        margin-left:320px;
+    }
+
+
+
+
+
+
+    .maintitle{
+        margin-left:120px;
+    }
+    .maintext{
+        margin-left:120px;
+    }
+    .addresstitle{
+        margin-left:170px;
+    }
+    .addressicon{
+       margin-left:120px;
+    }
+    .addresstext{
+        margin-left:170px;
+    }
+
+
+
+    .numbertitle{
+        margin-left:170px;
+    }
+    .numbericon{
+       margin-left:120px;
+    }
+    .numbertext{
+        margin-left:170px;
+    }
+
+
+    .emailtitle{
+        margin-left:170px;
+    }
+    .emailicon{
+       margin-left:120px;
+    }
+    .emailtext{
+        margin-left:170px;
+    }
+    .contactcard{
+        margin-left:500px;
+    }
+
+    .follow{
+        margin-left:120px;
+    }
+
+    .facebook{
+     margin-left:120px;
+    }
+
+    .twitter{
+    margin-left:170px;
+    }
+
+    .youtube{
+   margin-left:220px;
+    }
+    .instagram{
+     margin-left:270px;
+    }
+
+    .bm{
+        margin-left:330px;
+    }
+    .two{
+        margin-left:330px;
+
+    }
+    .three{
+        margin-left:330px;
+
+    }
+    .four{
+        margin-left:330px;
+
+    }
+.features{
+        margin-left:330px;
+
+    }
+    .five{
+        margin-left:580px;
+    }
+    .six{
+        margin-left:580px;
+
+    }
+    .seven{
+        margin-left:580px;
+
+    }
+    .eight{
+        margin-left:580px;
+
+    }
+    .resourses{
+        margin-left:580px;
+
+    }
+    .nine{
+        margin-left:830px;
+    }
+    .ten{
+        margin-left:830px;
+    }
+    .eleven{
+        margin-left:830px;
+
+    }
+    .twelve{
+        margin-left:830px;
+
+    }
+    .company{
+        margin-left:830px;
+
+    }
+}
+
+
+@media(max-width:1030px){
+    
+
+
+
+    
+    .footerlogo{
+        font-size:21px;
+    }
+
+
+    .footertext{
+        font-size:13px;
+        width:250px;
+        
+    }
+    .contactcard{
+        margin-left:480px;
+    }
+
+    .navbartitle{
+        margin-left:440px;
+    }
+
+    .navbartext{
+        margin-left:290px;
+    }
+
+     .maintitle{
+        margin-left:100px;
+    }
+
+    .maintext{
+        margin-left:100px;
+    }
+
+    .addresstitle{
+        margin-left:150px;
+    }
+
+    .addressicon{
+       margin-left:100px;
+    }
+
+    .addresstext{
+        margin-left:150px;
+    }
+
+     .numbertitle{
+        margin-left:150px;
+    }
+
+    .numbericon{
+       margin-left:100px;
+    }
+
+    .numbertext{
+        margin-left:150px;
+    }
+
+    .emailtitle{
+        margin-left:150px;
+    }
+
+    .emailicon{
+       margin-left:100px;
+    }
+
+    .emailtext{
+        margin-left:150px;
+    }
+
+    .contactcard{
+        margin-left:500px;
+    }
+
+    .follow{
+        margin-left:100px;
+    }
+
+    .facebook{
+     margin-left:100px;
+    }
+
+    .twitter{
+    margin-left:150px;
+    }
+
+    .youtube{
+   margin-left:200px;
+    }
+    .instagram{
+     margin-left:250px;
+    }
+
+    .bm{
+        margin-left:310px;
+    }
+    .two{
+        margin-left:310px;
+
+    }
+    .three{
+        margin-left:310px;
+
+    }
+    .four{
+        margin-left:310px;
+
+    }
+    .features{
+         margin-left:310px;
+
+    }
+       
+
+    .five{
+        margin-left:560px;
+    }
+    .six{
+        margin-left:560px;
+
+    }
+    .seven{
+        margin-left:560px;
+
+    }
+    .eight{
+        margin-left:560px;
+
+    }
+    .resourses{
+        margin-left:560px;
+
+    }
+    .nine{
+        margin-left:810px;
+    }
+    .ten{
+        margin-left:810px;
+    }
+    .eleven{
+        margin-left:810px;
+
+
+
+    }
+    .twelve{
+        margin-left:810px;
+
+    }
+    .company{
+        margin-left:810px;
+    }
+    .footerlogo{
+        margin-left:30px;
+    }
+    .footertext{
+        margin-left:30px;
+
+    }
+
+    .footeremail{
+        margin-left:30px;
+
+    }
+}
+
+@media (max-width:1020px){
+    .footerlogo{
+        font-size:21px;
+    }
+
+
+    .footertext{
+        font-size:13px;
+        width:250px;
+        
+    }
+    .contactcard{
+        margin-left:470px;
+    }
+
+    .navbartitle{
+        margin-left:430px;
+        font-size:30px;
+    }
+
+    .navbartext{
+        margin-left:280px;
+    }
+
+     .maintitle{
+        margin-left:90px;
+    }
+
+    .maintext{
+        margin-left:90px;
+    }
+
+    .addresstitle{
+        margin-left:140px;
+    }
+
+    .addressicon{
+       margin-left:90px;
+    }
+
+    .addresstext{
+        margin-left:140px;
+    }
+
+     .numbertitle{
+        margin-left:140px;
+    }
+
+    .numbericon{
+       margin-left:90px;
+    }
+
+    .numbertext{
+        margin-left:140px;
+    }
+
+    .emailtitle{
+        margin-left:140px;
+    }
+
+    .emailicon{
+       margin-left:90px;
+    }
+
+    .emailtext{
+        margin-left:140px;
+    }
+
+    .contactcard{
+        margin-left:490px;
+    }
+
+    .follow{
+        margin-left:90px;
+    }
+
+    .facebook{
+     margin-left:90px;
+    }
+
+    .twitter{
+    margin-left:140px;
+    }
+
+    .youtube{
+   margin-left:190px;
+    }
+    .instagram{
+     margin-left:240px;
+    }
+
+    .bm{
+        margin-left:290px;
+    }
+    .two{
+        margin-left:290px;
+
+    }
+    .three{
+        margin-left:290px;
+
+    }
+    .four{
+        margin-left:290px;
+
+    }
+    .features{
+         margin-left:290px;
+
+    }
+       
+
+    .five{
+        margin-left:540px;
+    }
+    .six{
+        margin-left:540px;
+
+    }
+    .seven{
+        margin-left:540px;
+
+    }
+    .eight{
+        margin-left:540px;
+
+    }
+    .resourses{
+        margin-left:540px;
+
+    }
+    .nine{
+        margin-left:790px;
+    }
+    .ten{
+        margin-left:790px;
+    }
+    .eleven{
+        margin-left:790px;
+
+
+
+    }
+    .twelve{
+        margin-left:790px;
+
+    }
+    .company{
+        margin-left:790px;
+    }
+    .footerlogo{
+        margin-left:20px;
+    }
+    .footertext{
+        margin-left:20px;
+
+    }
+
+    .footeremail{
+        margin-left:20px;
+
+    }
+}
+
+
+@media (max-width:1010px){
+    .footerlogo{
+        font-size:21px;
+    }
+
+
+    .footertext{
+        font-size:13px;
+        width:250px;
+        
+    }
+    .contactcard{
+        margin-left:460px;
+    }
+
+    .navbartitle{
+        margin-left:420px;
+        font-size:25px;
+    }
+
+    .navbartext{
+        margin-left:300px;
+        font-size:14px;
+        width:500px;
+    }
+
+     .maintitle{
+        margin-left:80px;
+        font-size:25px;
+    }
+
+    .maintext{
+        margin-left:80px;
+        font-size:16px;
+    }
+
+    .addresstitle{
+        margin-left:130px;
+    }
+
+    .addressicon{
+       margin-left:80px;
+    }
+
+    .addresstext{
+        margin-left:130px;
+    }
+
+     .numbertitle{
+        margin-left:130px;
+    }
+
+    .numbericon{
+       margin-left:80px;
+    }
+
+    .numbertext{
+        margin-left:130px;
+    }
+
+    .emailtitle{
+        margin-left:130px;
+    }
+
+    .emailicon{
+       margin-left:80px;
+    }
+
+    .emailtext{
+        margin-left:130px;
+    }
+
+    .contactcard{
+        margin-left:480px;
+    }
+
+    .follow{
+        margin-left:80px;
+    }
+
+    .facebook{
+     margin-left:80px;
+    }
+
+    .twitter{
+    margin-left:130px;
+    }
+
+    .youtube{
+   margin-left:180px;
+    }
+    .instagram{
+     margin-left:230px;
+    }
+
+    .bm{
+        margin-left:280px;
+    }
+    .two{
+        margin-left:280px;
+
+    }
+    .three{
+        margin-left:280px;
+
+    }
+    .four{
+        margin-left:280px;
+
+    }
+    .features{
+         margin-left:280px;
+
+    }
+       
+
+    .five{
+        margin-left:530px;
+    }
+    .six{
+        margin-left:530px;
+
+    }
+    .seven{
+        margin-left:530px;
+
+    }
+    .eight{
+        margin-left:530px;
+
+    }
+    .resourses{
+        margin-left:530px;
+
+    }
+    .nine{
+        margin-left:780px;
+    }
+    .ten{
+        margin-left:780px;
+    }
+    .eleven{
+        margin-left:780px;
+
+
+
+    }
+    .twelve{
+        margin-left:780px;
+
+    }
+    .company{
+        margin-left:780px;
+    }
+    .footerlogo{
+        margin-left:20px;
+    }
+    .footertext{
+        margin-left:20px;
+
+    }
+
+    .footeremail{
+        margin-left:20px;
+
+    }
+}
+
+@media (max-width:1000px){
+
+
+    .footerlogo{
+        font-size:21px;
+    }
+
+
+    .footertext{
+        font-size:13px;
+        width:250px;
+        
+    }
+    .contactcard{
+        margin-left:450px;
+    }
+
+    .navbartitle{
+        margin-left:410px;
+        font-size:25px;
+    }
+
+    .navbartext{
+        margin-left:290px;
+        font-size:14px;
+        width:500px;
+    }
+
+     .maintitle{
+        margin-left:70px;
+        font-size:25px;
+    }
+
+    .maintext{
+        margin-left:70px;
+        font-size:16px;
+    }
+
+    .addresstitle{
+        margin-left:120px;
+    }
+
+    .addressicon{
+       margin-left:70px;
+    }
+
+    .addresstext{
+        margin-left:120px;
+    }
+
+     .numbertitle{
+        margin-left:120px;
+    }
+
+    .numbericon{
+       margin-left:70px;
+    }
+
+    .numbertext{
+        margin-left:120px;
+    }
+
+    .emailtitle{
+        margin-left:130px;
+    }
+
+    .emailicon{
+       margin-left:70px;
+    }
+
+    .emailtext{
+        margin-left:120px;
+    }
+
+    .contactcard{
+        margin-left:470px;
+    }
+
+    .follow{
+        margin-left:70px;
+    }
+
+    .facebook{
+     margin-left:70px;
+    }
+
+    .twitter{
+    margin-left:120px;
+    }
+
+    .youtube{
+   margin-left:170px;
+    }
+    .instagram{
+     margin-left:220px;
+    }
+
+    .bm{
+        margin-left:270px;
+    }
+    .two{
+        margin-left:270px;
+
+    }
+    .three{
+        margin-left:270px;
+
+    }
+    .four{
+        margin-left:270px;
+
+    }
+    .features{
+         margin-left:270px;
+
+    }
+       
+
+    .five{
+        margin-left:520px;
+    }
+    .six{
+        margin-left:520px;
+
+    }
+    .seven{
+        margin-left:520px;
+
+    }
+    .eight{
+        margin-left:520px;
+
+    }
+    .resourses{
+        margin-left:520px;
+
+    }
+    .nine{
+        margin-left:770px;
+    }
+    .ten{
+        margin-left:770px;
+    }
+    .eleven{
+        margin-left:770px;
+
+
+
+    }
+    .twelve{
+        margin-left:770px;
+
+    }
+    .company{
+        margin-left:770px;
+    }
+    .footerlogo{
+        margin-left:20px;
+    }
+    .footertext{
+        margin-left:20px;
+
+    }
+
+    .footeremail{
+        margin-left:20px;
+
+    }
+}
+
+
+@media (max-width:990px){
+
+
+    .footerlogo{
+        font-size:21px;
+    }
+
+
+    .footertext{
+        font-size:13px;
+        width:250px;
+        
+    }
+    .contactcard{
+        margin-left:440px;
+    }
+
+    .navbartitle{
+        margin-left:400px;
+        font-size:25px;
+    }
+
+    .navbartext{
+        margin-left:280px;
+        font-size:14px;
+        width:500px;
+    }
+
+     .maintitle{
+        margin-left:60px;
+        font-size:25px;
+    }
+
+    .maintext{
+        margin-left:60px;
+        font-size:16px;
+    }
+
+    .addresstitle{
+        margin-left:110px;
+    }
+
+    .addressicon{
+       margin-left:60px;
+    }
+
+    .addresstext{
+        margin-left:110px;
+    }
+
+     .numbertitle{
+        margin-left:110px;
+    }
+
+    .numbericon{
+       margin-left:60px;
+    }
+
+    .numbertext{
+        margin-left:110px;
+    }
+
+    .emailtitle{
+        margin-left:120px;
+    }
+
+    .emailicon{
+       margin-left:60px;
+    }
+
+    .emailtext{
+        margin-left:110px;
+    }
+
+    .contactcard{
+        margin-left:460px;
+    }
+
+    .follow{
+        margin-left:60px;
+    }
+
+    .facebook{
+     margin-left:60px;
+    }
+
+    .twitter{
+    margin-left:110px;
+    }
+
+    .youtube{
+   margin-left:160px;
+    }
+    .instagram{
+     margin-left:210px;
+    }
+/* dont change here */
+    .bm{
+        margin-left:270px;
+    }
+    .two{
+        margin-left:270px;
+
+    }
+    .three{
+        margin-left:270px;
+
+    }
+    .four{
+        margin-left:270px;
+
+    }
+    .features{
+         margin-left:270px;
+
+    }
+    
+       /* dont change */
+
+    .five{
+        margin-left:510px;
+    }
+    .six{
+        margin-left:510px;
+
+    }
+    .seven{
+        margin-left:510px;
+
+    }
+    .eight{
+        margin-left:510px;
+
+    }
+    .resourses{
+        margin-left:510px;
+
+    }
+    .nine{
+        margin-left:760px;
+    }
+    .ten{
+        margin-left:760px;
+    }
+    .eleven{
+        margin-left:760px;
+
+
+
+    }
+    .twelve{
+        margin-left:750px;
+
+    }
+    .company{
+        margin-left:760px;
+    }
+    .footerlogo{
+        margin-left:20px;
+    }
+    .footertext{
+        margin-left:20px;
+
+    }
+
+    .footeremail{
+        margin-left:20px;
+
+    }
+}
+
+
+@media (max-width:980px){
+    .footerlogo{
+        font-size:21px;
+    }
+
+
+    .footertext{
+        font-size:13px;
+        width:250px;
+        
+    }
+    .contactcard{
+        margin-left:430px;
+    }
+
+    .navbartitle{
+        margin-left:390px;
+        font-size:25px;
+    }
+
+    .navbartext{
+        margin-left:270px;
+        font-size:14px;
+        width:500px;
+    }
+
+     .maintitle{
+        margin-left:50px;
+        font-size:25px;
+    }
+
+    .maintext{
+        margin-left:50px;
+        font-size:16px;
+    }
+
+    .addresstitle{
+        margin-left:100px;
+    }
+
+    .addressicon{
+       margin-left:50px;
+    }
+
+    .addresstext{
+        margin-left:100px;
+    }
+
+     .numbertitle{
+        margin-left:100px;
+    }
+
+    .numbericon{
+       margin-left:50px;
+    }
+
+    .numbertext{
+        margin-left:100px;
+    }
+
+    .emailtitle{
+        margin-left:110px;
+    }
+
+    .emailicon{
+       margin-left:50px;
+    }
+
+    .emailtext{
+        margin-left:100px;
+    }
+
+    .contactcard{
+        margin-left:450px;
+    }
+
+    .follow{
+        margin-left:50px;
+    }
+
+    .facebook{
+     margin-left:50px;
+    }
+
+    .twitter{
+    margin-left:100px;
+    }
+
+    .youtube{
+   margin-left:150px;
+    }
+    .instagram{
+     margin-left:200px;
+    }
+
+    .bm{
+        margin-left:270px;
+    }
+    .two{
+        margin-left:270px;
+
+    }
+    .three{
+        margin-left:270px;
+
+    }
+    .four{
+        margin-left:270px;
+
+    }
+    .features{
+         margin-left:270px;
+
+    }
+  
+
+    .five{
+        margin-left:500px;
+    }
+    .six{
+        margin-left:500px;
+
+    }
+    .seven{
+        margin-left:500px;
+
+    }
+    .eight{
+        margin-left:500px;
+
+    }
+    .resourses{
+        margin-left:500px;
+
+    }
+    .nine{
+        margin-left:750px;
+    }
+    .ten{
+        margin-left:750px;
+    }
+    .eleven{
+        margin-left:750px;
+
+
+
+    }
+    .twelve{
+        margin-left:750px;
+
+    }
+    .company{
+        margin-left:750px;
+    }
+    .footerlogo{
+        margin-left:20px;
+    }
+    .footertext{
+        margin-left:20px;
+
+    }
+
+    .footeremail{
+        margin-left:20px;
+
+    }
+}
+
+@media (max-width:970px){
+    .footerlogo{
+        font-size:21px;
+    }
+
+
+    .footertext{
+        font-size:13px;
+        width:250px;
+        
+    }
+    .contactcard{
+        margin-left:420px;
+    }
+
+    .navbartitle{
+        margin-left:380px;
+        font-size:25px;
+    }
+
+    .navbartext{
+        margin-left:260px;
+        font-size:14px;
+        width:500px;
+    }
+
+     .maintitle{
+        margin-left:40px;
+        font-size:25px;
+    }
+
+    .maintext{
+        margin-left:40px;
+        font-size:16px;
+    }
+
+    .addresstitle{
+        margin-left:90px;
+    }
+
+    .addressicon{
+       margin-left:40px;
+    }
+
+    .addresstext{
+        margin-left:90px;
+    }
+
+     .numbertitle{
+        margin-left:90px;
+    }
+
+    .numbericon{
+       margin-left:40px;
+    }
+
+    .numbertext{
+        margin-left:90px;
+    }
+
+    .emailtitle{
+        margin-left:90px;
+    }
+
+    .emailicon{
+       margin-left:40px;
+    }
+
+    .emailtext{
+        margin-left:90px;
+    }
+
+    .contactcard{
+        margin-left:440px;
+    }
+
+    .follow{
+        margin-left:40px;
+    }
+
+    .facebook{
+     margin-left:40px;
+    }
+
+    .twitter{
+    margin-left:90px;
+    }
+
+    .youtube{
+   margin-left:140px;
+    }
+    .instagram{
+     margin-left:190px;
+    }
+/* dont change here */
+    .bm{
+        margin-left:270px;
+    }
+    .two{
+        margin-left:270px;
+
+    }
+    .three{
+        margin-left:270px;
+
+    }
+    .four{
+        margin-left:270px;
+
+    }
+    .features{
+         margin-left:270px;
+
+    }
+    
+       /* dont change */
+
+    .five{
+        margin-left:490px;
+    }
+    .six{
+        margin-left:490px;
+
+    }
+    .seven{
+        margin-left:490px;
+
+    }
+    .eight{
+        margin-left:490px;
+
+    }
+    .resourses{
+        margin-left:490px;
+
+    }
+    .nine{
+        margin-left:740px;
+    }
+    .ten{
+        margin-left:740px;
+    }
+    .eleven{
+        margin-left:740px;
+
+
+
+    }
+    .twelve{
+        margin-left:740px;
+
+    }
+    .company{
+        margin-left:740px;
+    }
+    .footerlogo{
+        margin-left:20px;
+    }
+    .footertext{
+        margin-left:20px;
+
+    }
+
+    .footeremail{
+        margin-left:20px;
+
+    }
+    .copyrighttext{
+        font-size:14px;
+    }
+}
+
+@media (max-width:960px){
+    .five{
+        margin-left:480px;
+    }
+    .six{
+        margin-left:480px;
+
+    }
+    .seven{
+        margin-left:480px;
+
+    }
+    .eight{
+        margin-left:480px;
+
+    }
+    .resourses{
+        margin-left:480px;
+
+    }
+    .nine{
+        margin-left:730px;
+    }
+    .ten{
+        margin-left:730px;
+    }
+    .eleven{
+        margin-left:730px;
+
+
+
+    }
+    .twelve{
+        margin-left:730px;
+
+    }
+    .company{
+        margin-left:730px;
+    }
+}
+
+@media (max-width:950px){
+    .nine{
+        margin-left:720px;
+    }
+    .ten{
+        margin-left:720px;
+    }
+    .eleven{
+        margin-left:720px;
+
+
+
+    }
+    .twelve{
+        margin-left:720px;
+
+    }
+    .company{
+        margin-left:720px;
+    }
+}
+
+@media (max-width:940px){
+    .nine{
+        margin-left:710px;
+    }
+    .ten{
+        margin-left:710px;
+    }
+    .eleven{
+        margin-left:710px;
+
+
+
+    }
+    .twelve{
+        margin-left:710px;
+
+    }
+    .company{
+        margin-left:710px;
+    }
+}
+
+@media (max-width:930px){
+    .nine{
+        margin-left:700px;
+    }
+    .ten{
+        margin-left:700px;
+    }
+    .eleven{
+        margin-left:700px;
+
+
+
+    }
+    .twelve{
+        margin-left:700px;
+
+    }
+    .company{
+        margin-left:700px;
+    }
+}
+
+@media (max-width:920px){
+    .nine{
+        margin-left:690px;
+    }
+    .ten{
+        margin-left:690px;
+    }
+    .eleven{
+        margin-left:690px;
+
+
+
+    }
+    .twelve{
+        margin-left:690px;
+
+    }
+    .company{
+        margin-left:690px;
+    }
+    .contactcard{
+        margin-left:420px;
+    }
+}
+
+@media (max-width:910px){
+    .nine{
+        margin-left:680px;
+    }
+    .ten{
+        margin-left:680px;
+    }
+    .eleven{
+        margin-left:680px;
+
+
+
+    }
+    .twelve{
+        margin-left:680px;
+
+    }
+    .company{
+        margin-left:680px;
+    }
+    .contactcard{
+        margin-left:410px;
+    }
+
+    .maintitle{
+        margin-left:40px;
+        font-size:23px;
+    }
+
+    .maintext{
+        margin-left:40px;
+        font-size:14px;
+    }
+
+}
+
+
+@media (max-width:355px){
+    .leftside{
+  display:flex;
+  position:absolute;
+   margin-top:800px;
+   width:500px;
+   margin-left:20px;
+
+    }
+.navbarlogo{
+    font-size:45px;
+}
+.navbartitle{
+    font-size:35px;
+}
+.navbartext{
+    font-size:20px;
+    width:600px;
+    margin-left:100px;
+    text-align: center;
+}
+
+    .mainpage{
+        height:1500px;
+    }
+.contactcard{
+    margin-right:1000px;
+    width:650px;
+    height: 650px;
+}
+.cardbutton{
+    padding:25px 50px;    font-size:25px;
+    margin-left:330px;
+    margin-top:500px;
+}
+.cardtext{
+    font-size:20px;
+    width:500px;
+    margin-left:50px;
+    margin-top:370px;
+}
+
+.usernameinput{
+    width:400px;
+    height:70px;
+    margin-left:50px;
+    margin-top:70px;
+    font-size:24px;
+}
+.usernameinput2{
+    width:400px;
+    height:70px;
+    margin-left:50px;
+    margin-top:150px;
+    font-size:24px;
+}
+.textarea{
+    width:400px;
+    height:80px;
+    margin-left:50px;
+    margin-top:250px;
+    font-size:24px;
+}
+.navbartitle{
+    margin-left:260px;
+}
+
+    .maintitle{
+        margin-left:110px;
+        font-size:35px;
+    }
+
+    .maintext{
+        margin-left:110px;
+        font-size:22px;
+        width:400px;
+    }
+
+    .addresstitle{
+        margin-left:160px;
+        font-size: 25px;
+        
+    }
+.addresstext{
+    font-size:20px;
+    margin-top:330px;
+}
+    .addressicon{
+       margin-left:100px;
+       margin-top:300px;
+       width:50px;
+       height:50px;
+       font-size: 25px;
+    }
+
+    .addresstext{
+        margin-left:160px;
+    }
+
+     .numbertitle{
+        margin-left:160px;
+        font-size: 25px;
+        margin-top:375px;
+
+    }
+
+    .numbericon{
+        width:50px;
+        height:50px;
+       margin-left:100px;
+       margin-top:385px;
+       font-size:25px;
+    }
+
+    .numbertext{
+        margin-left:160px;
+        font-size: 20px;  
+        margin-top:415px;
+      }
+
+      .follow{
+        font-size:30px;
+      }
+      .instagram, .facebook, .youtube, .twitter{
+        width:50px;
+        height:50px;
+        font-size:25px;
+      
+      }
+      
+    .emailtitle{
+        margin-left:160px;
+        font-size:25px;
+        margin-top:460px;
+    }
+
+    .emailicon{
+       margin-left:110px;
+       width: 50px;
+       height:50px;
+       margin-left:100px;
+       margin-top:460px;
+       font-size:25px;
+    }
+
+    .emailtext{
+        margin-left:160px;
+        font-size:20px;
+        margin-top:490px;
+    }
+
+    .contactcard{
+     margin-left:100px;
+    }
+
+    .follow{
+        margin-left:110px;
+
+    }
+
+    .facebook{
+     margin-left:110px;
+     margin-top:600px;
+    }
+
+    .twitter{
+
+    margin-left:170px;
+    }
+
+    .youtube{
+        margin-top:40px;
+
+   margin-left:230px;
+    }
+    .instagram{
+        margin-top:40px;
+
+     margin-left:290px;
+     
+    }
+.footer{
+    height:500px;
+
+}
+   .features2{
+     display: flex;
+     position:absolute;
+      width:1400px;
+      font-size:20px;
+      margin-left:280px;
+      
+   }
+   .footerlogo{
+    margin-left:100px;
+   }
+   .footertext{
+    margin-left:100px;
+    font-size:20px;
+    width:400px;
+   }
+   .footeremail{
+    margin-left:100px;
+    font-size:20px;
+   }
+   .resourses2{
+display: flex;
+position:absolute;
+width:1000px;
+font-size:20px;
+margin-top:270px;
+margin-left:-400px;
+
+justify-content: left;
+   }
+   .company2{
+    margin-top:270px;
+    margin-left:-200px;
+    display: flex;
+    position:absolute;
+    width: 1300px;
+   font-size:20px;
+   }
+
+   .bm{
+    margin-left:270px;
+    font-size:23px;
+}
+.two{
+    margin-left:270px;
+    font-size:23px;
+    margin-top:110px;
+}
+.three{
+    margin-left:270px;
+    font-size:23px;
+    margin-top:140px;
+
+}
+.four{
+    margin-left:270px;
+    font-size:23px;
+    margin-top:180px;
+}
+.features{
+     margin-left:270px;
+     font-size:25px;
+
+
+}
+
+
+.five{
+    margin-left:500px;
+    font-size:23px;
+
+}
+.six{
+    margin-left:500px;
+    font-size:23px;
+
+}
+.seven{
+    margin-left:500px;
+    font-size:23px;
+
+}
+.eight{
+    margin-left:500px;
+    font-size:23px;
+
+}
+.resourses{
+    margin-left:500px;
+    font-size:25px;
+
+}
+.nine{
+    margin-left:750px;
+    font-size:23px;
+
+}
+.ten{
+    margin-left:750px;
+    font-size:23px;
+
+}
+.eleven{
+    margin-left:750px;
+    font-size:23px;
+
+
+
+}
+.twelve{
+    margin-left:750px;
+    font-size:23px;
+
+
+}
+.company{
+    margin-left:750px;
+    font-size:25px;
+}
+   
+}
+
+
+.follow{
+  margin-top:550px;
+}
+
+.facebook{
+margin-top:590px;
+}
+
+.twitter{
+margin-top:590px;
+}
+
+.youtube{
+margin-top:590px;
+}
+.instagram{
+margin-top:590px;
+
+}
+
