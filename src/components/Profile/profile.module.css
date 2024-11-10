@@ -1,0 +1,345 @@
+/* General Layout */
+.profileContainer {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.sidebar {
+    width: 220px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    height: 100%;
+    border-right: 2px solid #ddd;
+    border-radius: 0 8px 8px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 100; /* Ensure sidebar is above other content */
+    transform: translateX(0); /* Sidebar fully visible on desktop */
+    left: 0; /* Ensure it's visible on the left */
+}
+
+/* Sidebar heading */
+.sidebar h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Sidebar list items */
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+    cursor: pointer;
+    color: #1500d6;
+    font-size: 18px;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+/* Sidebar item hover effect */
+.sidebar ul li:hover,
+.sidebar ul li.active {
+    color: white;
+    background-color: #1e0b9d;
+    font-weight: bold;
+    transform: scale(1.05);
+}
+
+.sidebar ul li {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Main content */
+.content {
+    margin-left: 240px; /* Push content more to the right */
+    padding: 20px;
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 30px;
+}
+
+.profileSection, .companySection, .securitySection {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 0.4px solid #ddd;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.279);
+}
+
+/* Mobile Burger Menu */
+.burgerMenu {
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.burgerMenu.open {
+    color: #1500d6;
+}
+
+.burgerMenu .menuToggle {
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+/* Mobile menu */
+.menuItems {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 70%;
+    background-color: #222;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    z-index: 1000;
+    transform: translateX(-100%); /* Hidden by default */
+    transition: transform 0.3s ease;
+}
+
+.menuItems.open {
+    transform: translateX(0); /* Show when the 'open' class is added */
+}
+
+.menuItems a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* Profile container styles */
+.profileInfoContainer {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.279);
+}
+
+.profilePhotoContainer {
+    position: relative;
+    margin-right: 20px;
+}
+
+.profilePicture {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+    border: 0.5px solid #00008b; /* Dark blue border */
+}
+
+/* Pen icon hover effect */
+.penIcon {
+    margin-left: 5px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s, color 0.2s;
+    color: black;
+}
+
+.penIcon:hover {
+    opacity: 1;
+    color: blue;
+}
+
+/* Camera icon hover effect */
+.cameraIcon {
+    position: absolute;
+    bottom: 5px;
+    right: 15px;
+    width: 22px;
+    height: 25px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s, color 0.2s;
+    color: black;
+}
+
+.cameraIcon:hover {
+    opacity: 1;
+    color: blue;
+}
+
+.profileInfo {
+    flex-grow: 1;
+}
+
+.profileInfo p {
+    margin: 10px 0;
+    font-size: 17px;
+    color: #555;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.profileInfo strong {
+    color: #0f0da1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.securitySection {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 0.4px solid #ddd;
+    box-shadow: 0 0.5px 2px rgba(0, 0, 0, 0.548);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.securityInfo p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .burgerMenu {
+        display: block;
+    }
+
+    /* Initially hidden sidebar on mobile */
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -100%; /* Sidebar is completely off-screen initially */
+        transition: left 0.3s ease; /* Ensure smooth transition */
+    }
+
+    /* Show sidebar when 'open' class is added */
+    .sidebar.open {
+        left: 0; /* Sidebar comes into view */
+    }
+
+    /* Move profile photo container to center for mobile */
+    .profileInfoContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profilePhotoContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Adjust content layout on mobile */
+    .content {
+        margin-left: 0; /* No margin left when sidebar is hidden */
+        padding: 10px;
+    }
+
+    /* Hide 'კატეგორიები' text on mobile */
+    .sidebar h2 {
+        display: none; /* Hide the 'კატეგორიები' text */
+    }
+
+    /* Move category buttons below the burger menu */
+    .sidebar ul {
+        margin-top: 60px; /* Add some space after burger menu */
+    }
+
+    .sidebar ul li {
+        display: block; /* Make sure categories are visible in the sidebar */
+    }
+}
+
+/* Popup styles remain unchanged */
+.popupOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.popup h2 {
+    margin-bottom: 15px;
+}
+
+.popup input {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 5px;
+}
+
+.popupActions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.saveBtn,
+.cancelBtn {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.saveBtn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.cancelBtn {
+    background-color: #f44336;
+    color: white;
+}
+
+.errorText {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+input[type="file"],
+input[type="text"] {
+    width: 96%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
