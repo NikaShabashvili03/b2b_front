@@ -16,16 +16,18 @@ import Product from './components/ProductId/Product';
 import Contact from './components/Contact/Contact';
 
 function App() {
-    const { isAuthentifcated } = useAuth();
+    const { isAuthenticated, status } = useAuth();
+
+    if(status === 'loading' || status === 'idle' || status === 'pending') return <div>...</div>
 
     return (
         <Routes>
-            <Route path='/login' element={!isAuthentifcated ? <Login/> : <Navigate to={'/'}/>}/>
-            <Route path='/register' element={!isAuthentifcated ? <RegistrationForm/> : <Navigate to={'/'}/>}/>
-            <Route element={!isAuthentifcated ? <Main/> : <Navigate to={'/login'}/>}>
+            <Route path='/login' element={!isAuthenticated ? <Login/> : <Navigate to={'/'}/>}/>
+            <Route path='/register' element={!isAuthenticated ? <RegistrationForm/> : <Navigate to={'/'}/>}/>
+            <Route element={isAuthenticated ? <Main/> : <Navigate to={'/login'}/>}>
                 <Route path="/" element={<Categories />} />
-                <Route path="/products" element={<Products />} />
-                <Route path='/products/:id' element={<Product/>}/>
+                <Route path="/:categoryId/products" element={<Products />} />
+                <Route path='/:categoryId/products/:productId' element={<Product/>}/>
                 <Route path="/about" element={<About/>}/>
                 <Route path="/contact" element={<Contact/>}/>
                 <Route path="/profile" element={<Profile/>}/>

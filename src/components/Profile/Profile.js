@@ -4,19 +4,21 @@ import personalProfilePhoto from '../../assets/kvercxi 1.jpg';
 import companyProfilePhoto from '../../assets/Gm.png';
 import penIcon from '../../assets/pen-solid.svg';
 import cameraIcon from '../../assets/camera-solid.svg';
+import { useAuth } from '../../context/AuthContext';
 
 function Profile() {
+  const { user } = useAuth();
   const [selectedCategory, setSelectedCategory] = useState('profile');
   const [showImagePopup, setShowImagePopup] = useState(false);
   const [showCompanyImagePopup, setShowCompanyImagePopup] = useState(false);
   const [showTextPopup, setShowTextPopup] = useState(false);
   const [currentField, setCurrentField] = useState('');
-  const [name, setName] = useState('შენი სახელი');
-  const [lastName, setLastName] = useState('შენი გვარი');
-  const [phone, setPhone] = useState('(123) 456-7890');
-  const [companyName, setCompanyName] = useState('შენი კომპანია');
-  const [companyId, setCompanyId] = useState('123456789');
-  const [position, setPosition] = useState('შენი თანამდებობა');
+  const [name, setName] = useState(user.name);
+  const [lastName, setLastName] = useState(user.lastname);
+  const [phone, setPhone] = useState(user.phone);
+  const [companyName, setCompanyName] = useState(user.company);
+  const [companyId, setCompanyId] = useState(user.identify);
+  const [position, setPosition] = useState(user.position);
   const [currentText, setCurrentText] = useState('');
   const [imageFile, setImageFile] = useState(null);
   const [burgerOpen, setBurgerOpen] = useState(false);
@@ -237,7 +239,7 @@ function Profile() {
               />
             </p>
             <p>
-              <strong>ელ. ფოსტა:</strong> example@mail.com
+              <strong>ელ. ფოსტა:</strong> {user.email}
               <img
                 src={penIcon}
                 alt="Edit"

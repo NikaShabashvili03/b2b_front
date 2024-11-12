@@ -21,11 +21,29 @@ export const AuthProvider = ({ children }) => {
     }
   }, [dispatch, user]);
   
-  const register = async (email, password) => {
-    await dispatch(registerProfile({ email, password }))
+  const register = async ({
+    company,
+    position, 
+    identify, 
+    name,
+    lastname,
+    phone, 
+    email, 
+    password,
+  }) => {
+    await dispatch(registerProfile({ 
+      company,
+      position, 
+      identify, 
+      name,
+      lastname,
+      phone, 
+      email, 
+      password,
+    }))
   }
 
-  const login = async (email, password) => {
+  const login = async ({ email, password }) => {
     await dispatch(loginUser({ email, password }));
   };
 

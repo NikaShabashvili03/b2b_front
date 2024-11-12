@@ -1,20 +1,34 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './Product.module.css'; // Import CSS module
 import iphone1 from '../../assets/1.jpg';
 import iphone2 from '../../assets/2.jpg';
 import iphone3 from '../../assets/3.jpg';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchProductOneById } from '../../redux/slices/productByIdSlice';
+import { useParams } from 'react-router-dom';
 
 const Product = () => {
-  const images = [iphone1, iphone2, iphone3];
+  const { productId } = useParams();
   const [currentImage, setCurrentImage] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const dispatch = useDispatch()
+  const { data, status } = useSelector((state) => state.productById)
+
+  useEffect(() => {
+    dispatch(fetchProductOneById({
+      productId: productId
+    }))
+  }, [dispatch, productId])
+
+  
+  if(status === 'loading' || status === 'idle') return <div>Loading...</div>
 
   const nextImage = () => {
-    setCurrentImage((prev) => (prev + 1) % images.length);
+    setCurrentImage((prev) => (prev + 1) % data.images.length);
   };
 
   const prevImage = () => {
-    setCurrentImage((prev) => (prev - 1 + images.length) % images.length);
+    setCurrentImage((prev) => (prev - 1 + data.images.length) % data.images.length);
   };
 
   const openModal = () => {
@@ -32,7 +46,7 @@ const Product = () => {
           <button className={styles.prev} onClick={prevImage}>❮</button>
           <div className={styles.carouselImagesContainer}>
             <img
-              src={images[currentImage]}
+              src={data.images[currentImage]}
               alt="iPhone"
               className={styles.carouselImage}
               onClick={openModal}
@@ -42,36 +56,13 @@ const Product = () => {
         </div>
 
         <div className={styles.productInfo}>
-          <h3>iPhone 16</h3>
+          <h3>{data.name}</h3>
           <div className={styles.productSpecs}>
-            <div className={styles.specItem}>
-              <span>ეკრანის ზომა</span>
-              <span>6.8 inches</span>
-            </div>
-            <div className={styles.specItem}>
-              <span>განახლების სიხშირე</span>
-              <span>120Hz</span>
-            </div>
-            <div className={styles.specItem}>
-              <span>ეკრანის ტიპი</span>
-              <span>Dynamic AMOLED 2X</span>
-            </div>
-            <div className={styles.specItem}>
-              <span>შიდა მეხსიერება</span>
-              <span>256GB</span>
-            </div>
-            <div className={styles.specItem}>
-              <span>Bluetooth</span>
-              <span>5.3</span>
-            </div>
-            <div className={styles.specItem}>
-              <span>ოპერატიული მეხსიერება</span>
-              <span>12GB</span>
-            </div>
+            {data.description}
           </div>
 
           <div className={styles.priceBox}>
-            <h2>2,430 GEL</h2>
+            <h2>{data.price} GEL</h2>
             <div className={styles.buttonContainer}>
               <button className={styles.cartButton}>კალათაში დამატება</button>
             </div>
@@ -83,7 +74,7 @@ const Product = () => {
           <div className={styles.modal} onClick={closeModal}>
             <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
               <img
-                src={images[currentImage]}
+                src={data.images[currentImage]}
                 alt="iPhone enlarged"
                 className={styles.modalImage}
               />

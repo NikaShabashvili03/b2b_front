@@ -256,9 +256,12 @@ body {
     width: 200px; 
     padding: 4px 60px; 
     flex-shrink: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     background: white;
     border-radius: 10px;
-    color: black; 
     height: 60%;
 }
 .sidebarTitle {

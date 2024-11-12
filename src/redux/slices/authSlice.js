@@ -18,8 +18,9 @@ export const loginUser = createAsyncThunk(
         email: email,
         password: password
       });
-      
-      return response;
+
+      window.localStorage.setItem('token', response.token);
+      return response.user;
     } catch (error) {
       return rejectWithValue(error.response?.data.message);
     }
@@ -33,6 +34,7 @@ export const fetchUserProfile = createAsyncThunk('auth/fetchUserProfile', async 
 
 export const logoutUser = createAsyncThunk('auth/logoutUser', async () => {
   await logout();
+  window.localStorage.removeItem("token")
 });
 
 const authSlice = createSlice({

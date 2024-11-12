@@ -10,6 +10,14 @@ const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState("");
     const { login } = useAuth();
+
+    const onSubmit = () => {
+        dispatch(login({
+            email: email,
+            password: password
+        }))
+    }
+
     return (
         <div className={styles.wrapper}>
             <div className={styles['container-reg']}>
@@ -24,13 +32,14 @@ const Login = () => {
                     </div>
                     <div className={styles['input-group']}>
                         <label>Password</label>
-                        <input value={email} onChange={(e) => setPassword(e.target.value)} type="password" id="password" name="password" required="" />
+                        <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" id="password" name="password" required="" />
                         {/* <a href="#" className={styles['forgot-password']}>
                             Forgot Password?
                         </a> */}
                     </div>
                     <button
                         type="submit"
+                        onClick={() => onSubmit()}
                         className={styles['login-button']}
                     >
                         Login
