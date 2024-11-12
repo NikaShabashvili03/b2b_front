@@ -1,8 +1,7 @@
 // src/context/AuthContext.tsx
 import React, { createContext, useContext, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchUserProfile, loginUser, logoutUser } from '../redux/slices/authSlice';
-import { registerProfile } from '../api/auth';
+import { fetchUserProfile, fetchUserRegister, loginUser, logoutUser } from '../redux/slices/authSlice';
 
 
 const AuthContext = createContext(undefined);
@@ -11,8 +10,6 @@ export const AuthProvider = ({ children }) => {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.auth.user);
   const status = useSelector((state) => state.auth.status);
-  const error = useSelector((state) => state.auth.error);
-  const success = useSelector((state) => state.auth.success);
   const isAuthenticated = !!user;
 
   useEffect(() => {
@@ -31,7 +28,7 @@ export const AuthProvider = ({ children }) => {
     email, 
     password,
   }) => {
-    await dispatch(registerProfile({ 
+    await dispatch(fetchUserRegister({ 
       company,
       position, 
       identify, 
@@ -52,7 +49,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ user, login, logout, register, isAuthenticated, status, error, success }}>
+    <AuthContext.Provider value={{ user, login, logout, register, isAuthenticated, status }}>
       {children}
     </AuthContext.Provider>
   );

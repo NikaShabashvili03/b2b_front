@@ -6,16 +6,15 @@ import { loginUser } from '../../redux/slices/authSlice';
 import { useAuth } from '../../context/AuthContext';
 
 const Login = () => {
-    const dispatch = useDispatch();
-    const [email, setEmail] = useState('');
+    const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const { login } = useAuth();
 
     const onSubmit = () => {
-        dispatch(login({
+        login({
             email: email,
             password: password
-        }))
+        })
     }
 
     return (
@@ -23,7 +22,7 @@ const Login = () => {
             <div className={styles['container-reg']}>
                 <form onSubmit={(e) => {
                             e.preventDefault()
-                            login({ email, password })
+                            onSubmit()
                     }} className={styles['login-form']}>
                     <h2>Login</h2>
                     <div className={styles['input-group']}>
@@ -39,7 +38,6 @@ const Login = () => {
                     </div>
                     <button
                         type="submit"
-                        onClick={() => onSubmit()}
                         className={styles['login-button']}
                     >
                         Login

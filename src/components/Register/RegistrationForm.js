@@ -26,22 +26,26 @@ const RegistrationForm = () => {
     }));
   };
 
+  const onSubmit = () => {
+    if (data.password !== data.rePassword) return alert("გაიმეორეთ პაროლი სწორად");
+    register({
+      company: data.company,
+      position: data.position,
+      identify: data.identify,
+      name: data.name,
+      lastname: data.lastname,
+      phone: data.phone,
+      email: data.email,
+      password: data.password,
+    });
+  }
+
   return (
     <div className={styles.App}>
       <form 
         onSubmit={(e) => {
           e.preventDefault();
-          if (data.password !== data.rePassword) return alert("გაიმეორეთ პაროლი სწორად");
-          register({
-            company: data.company,
-            position: data.position,
-            identify: data.identify,
-            name: data.name,
-            lastname: data.lastname,
-            phone: data.phone,
-            email: data.email,
-            password: data.password,
-          });
+          onSubmit()
         }} 
         className={styles.registrationform}
       >
