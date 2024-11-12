@@ -9,23 +9,30 @@ import { ImCross } from "react-icons/im";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProducts } from "../../../redux/slices/productsSlice";
 import { fetchSubCategories } from "../../../redux/slices/subCategorySlice";
-
+import useQueryParams from '../../../hooks/useQueryParams'
 
 const Products = () => {
   const { categoryId } = useParams()
   const products = useSelector((state) => state.products)
   const subCategories = useSelector((state) => state.subCategory)
+  const [queryParams, updateQueryParams] = useQueryParams();
   const dispatch = useDispatch()
   
+  const handleSubCategoryChange = ({ _id }) => {
+    updateQueryParams({ subcategory: _id });
+  };
+
   useEffect(() => {
     dispatch(fetchProducts({
-      categoryId: categoryId
+      categoryId: categoryId,
+      subcategoryId: queryParams.subcategory,
+      page: queryParams.page
     }))
 
     dispatch(fetchSubCategories({
       categoryId: categoryId
     }))
-  }, [dispatch, categoryId])
+  }, [dispatch, categoryId, queryParams])
 
   return (
     <div className={styles.container}>
@@ -36,6 +43,9 @@ const Products = () => {
 
           {/* <button className="filtero">filter</button>
           <button className="cart" onClick={toggleCartVisibility}>cart</button> */}
+          <button onClick={() => {
+            updateQueryParams({ subcategory: null })
+          }} className="filtero">Clear Filter</button>
           {subCategories.status === 'loading' 
             ? (
               <div>
@@ -49,7 +59,9 @@ const Products = () => {
                     key={index} 
                     className={`${styles.categoryItem}`} 
                   >
-                    {subCategory.name}
+                    <button onClick={() => handleSubCategoryChange({ _id: subCategory._id })}>
+                      {subCategory.name}
+                    </button>
                   </li>
                 ))}
               </ul>
@@ -127,17 +139,21 @@ const Products = () => {
           <div className={styles.pagination}>
             <button
               className={styles.pageButton}
+              disabled={products.page === 0}
+              onClick={() => queryParams.page > 0 && updateQueryParams({ page: queryParams.page - 1 })}
             >
               &lt;
             </button>
 
   
-
+            {queryParams.page ? queryParams.page : 0}
            
             
 
             <button
               className={styles.pageButton}
+              disabled={queryParams.page === products.pages}
+              onClick={() => queryParams.page < products.pages && updateQueryParams({ page: queryParams.page + 1 })}
             >
               &gt;
             </button>

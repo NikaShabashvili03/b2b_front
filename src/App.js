@@ -14,11 +14,12 @@ import About from './components/About/AboutUs';
 import Profile from './components/Profile/Profile'
 import Product from './components/ProductId/Product';
 import Contact from './components/Contact/Contact';
+import Loader from './components/Loader'
 
 function App() {
     const { isAuthenticated, status } = useAuth();
 
-    if(status === 'loading' || status === 'idle' || status === 'pending') return <div>...</div>
+    if(status === 'loading' || status === 'idle' || status === 'pending') return <Loader/>
 
     return (
         <Routes>

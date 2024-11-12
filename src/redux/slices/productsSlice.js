@@ -3,6 +3,7 @@ import { fetchProduct } from '../../api/products';
 
 const initialState = {
     data: null,
+    pages: 0,
     status: 'idle',
     error: null,
     success: null
@@ -11,10 +12,12 @@ const initialState = {
 
 export const fetchProducts = createAsyncThunk(
     'product/fetchProduct',
-    async ({ categoryId }, { rejectWithValue }) => {
+    async ({ categoryId, page, subcategoryId }, { rejectWithValue }) => {
       try {
         const response = await fetchProduct({
-            categoryId: categoryId
+            categoryId: categoryId,
+            subcategoryId: subcategoryId,
+            page: page
         });
         
         return response;
@@ -37,7 +40,8 @@ const productsSlice = createSlice({
       })
       .addCase(fetchProducts.fulfilled, (state, action) => {
         state.status = 'succeeded'
-        state.data = action.payload;
+        state.data = action.payload.products;
+        state.pages = action.payload.pages
         state.error = null;
         state.success = null;
       })
