@@ -23,9 +23,9 @@ function App() {
 
     return (
         <Routes>
-            <Route path='/login' element={!isAuthenticated ? <Login/> : <Navigate to={'/'}/>}/>
-            <Route path='/register' element={!isAuthenticated ? <RegistrationForm/> : <Navigate to={'/'}/>}/>
-            <Route element={isAuthenticated ? <Main/> : <Navigate to={'/login'}/>}>
+            <Route path='/login' element={isAuthenticated ? <Login/> : <Navigate to={'/'}/>}/>
+            <Route path='/register' element={isAuthenticated ? <RegistrationForm/> : <Navigate to={'/'}/>}/>
+            <Route element={!isAuthenticated ? <Main/> : <Navigate to={'/login'}/>}>
                 <Route path="/" element={<Categories />} />
                 <Route path="/:categoryId/products" element={<Products />} />
                 <Route path='/:categoryId/products/:productId' element={<Product/>}/>
