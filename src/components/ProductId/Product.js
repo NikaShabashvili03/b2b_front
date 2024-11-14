@@ -6,6 +6,7 @@ import iphone3 from '../../assets/3.jpg';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProductOneById } from '../../redux/slices/productByIdSlice';
 import { useParams } from 'react-router-dom';
+import { addOnCart } from '../../redux/slices/cartSlice';
 
 const Product = () => {
   const { productId } = useParams();
@@ -39,6 +40,13 @@ const Product = () => {
     setIsModalOpen(false);
   };
 
+  const onHandleAddCart = () => {
+    dispatch(addOnCart({
+      productId: productId,
+      quantity: 1,
+    }))
+  }
+
   return (
     <div className={styles.biggestBox}>
       <div className={styles.productContainer}>
@@ -64,7 +72,7 @@ const Product = () => {
           <div className={styles.priceBox}>
             <h2>{data.price} GEL</h2>
             <div className={styles.buttonContainer}>
-              <button className={styles.cartButton}>კალათაში დამატება</button>
+              <button onClick={onHandleAddCart} className={styles.cartButton}>კალათაში დამატება</button>
             </div>
           </div>
         </div>

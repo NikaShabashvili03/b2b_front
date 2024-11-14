@@ -1,11 +1,20 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './main.module.css';
 import { Link, Outlet } from 'react-router-dom';
 import GME from '../../assets/GM-logo.png';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchCartProducts } from '../../redux/slices/cartSlice';
 
 const Main = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isAuth = localStorage.getItem("password") === "1";
+  const dispatch = useDispatch()
+  const cartLength = useSelector((state) => state.cart.length);
+
+  useEffect(() => {
+    dispatch(fetchCartProducts())
+  }, [dispatch])
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -41,7 +50,10 @@ const Main = () => {
                   <option value="ru">Russian</option>
                   <option value="ka">Georgian</option>
                 </select>
-                <Link to="/cart" className={styles.favorite}><i className="fa-solid fa-cart-shopping"></i></Link>
+                <Link to="/cart" className={styles.favorite}>
+                  <i className="fa-solid fa-cart-shopping"></i>
+                  <p className={styles.cartLength}>{cartLength}</p>
+                </Link>
                 <Link to="/profile" className={styles.profileIcon}><i className="fa-regular fa-user"></i></Link>
               </div>
               {isAuth && (
