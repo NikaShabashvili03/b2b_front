@@ -17,7 +17,8 @@ const Products = () => {
   const subCategories = useSelector((state) => state.subCategory)
   const [queryParams, updateQueryParams] = useQueryParams();
   const dispatch = useDispatch()
-  
+
+  console.log(products)
   const handleSubCategoryChange = ({ _id }) => {
     updateQueryParams({ subcategory: _id });
   };
@@ -98,10 +99,10 @@ const Products = () => {
               ))
               : products?.data?.length > 0 ? (
                 products.data.map(product => (
-                  <div className={styles.item} key={product._id}>
+                  <div className={styles.item} key={product.productId._id}>
                     <div className={styles.imager}>
-                      <Link to={product._id}>
-                        <img src={product.images[0] || 'https://img.freepik.com/free-vector/white-product-podium-with-green-tropical-palm-leaves-golden-round-arch-green-wall_87521-3023.jpg'} alt={product.name} />
+                      <Link to={product.productId._id}>
+                        <img src={product.productId.images[0] || 'https://img.freepik.com/free-vector/white-product-podium-with-green-tropical-palm-leaves-golden-round-arch-green-wall_87521-3023.jpg'} alt={product.name} />
                         <div className={styles.additional}>
                           <RiShoppingCart2Line className={styles.cartIcon} />
                         </div>
@@ -111,8 +112,8 @@ const Products = () => {
                           {/* {!product.isNew && <span className={styles.newLabel}> ახალი </span>} */}
                         </div>
                       </Link>
-                      <div className={styles.price}>{product.price}ლ</div>
-                      <div className={styles.date}>{new Date(product.createdAt).toISOString().split("T")[0]}</div>
+                      <div className={styles.price}>{product.totalPrice}ლ</div>
+                      <div className={styles.date}>{new Date(product.productId.createdAt).toISOString().split("T")[0]}</div>
                       <div className={`${styles.stockStatus} ${product.quantity > 0 ? styles.inStock : styles.outOfStock}`}>
                         {product.quantity > 0 ? (
                           <>

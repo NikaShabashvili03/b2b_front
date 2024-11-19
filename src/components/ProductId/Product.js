@@ -15,6 +15,7 @@ const Product = () => {
   const dispatch = useDispatch()
   const { data, status } = useSelector((state) => state.productById)
 
+  console.log(data)
   useEffect(() => {
     dispatch(fetchProductOneById({
       productId: productId
@@ -25,11 +26,11 @@ const Product = () => {
   if(status === 'loading' || status === 'idle') return <div>Loading...</div>
 
   const nextImage = () => {
-    setCurrentImage((prev) => (prev + 1) % data.images.length);
+    // setCurrentImage((prev) => (prev + 1) % data?.images?.length);
   };
 
   const prevImage = () => {
-    setCurrentImage((prev) => (prev - 1 + data.images.length) % data.images.length);
+    // setCurrentImage((prev) => (prev - 1 + data?.images?.length) % data.images.length);
   };
 
   const openModal = () => {
@@ -54,7 +55,8 @@ const Product = () => {
           <button className={styles.prev} onClick={prevImage}>❮</button>
           <div className={styles.carouselImagesContainer}>
             <img
-              src={data.images[currentImage]}
+              // src={data?.images[currentImage]}
+              src=''
               alt="iPhone"
               className={styles.carouselImage}
               onClick={openModal}
@@ -64,13 +66,13 @@ const Product = () => {
         </div>
 
         <div className={styles.productInfo}>
-          <h3>{data.name}</h3>
+          {/* <h3>{data.name}</h3> */}
           <div className={styles.productSpecs}>
-            {data.description}
+            {/* {data.description} */}
           </div>
 
           <div className={styles.priceBox}>
-            <h2>{data.price} GEL</h2>
+            {/* <h2>{data.price} GEL</h2> */}
             <div className={styles.buttonContainer}>
               <button onClick={onHandleAddCart} className={styles.cartButton}>კალათაში დამატება</button>
             </div>
@@ -82,7 +84,8 @@ const Product = () => {
           <div className={styles.modal} onClick={closeModal}>
             <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
               <img
-                src={data.images[currentImage]}
+                // src={data.images[currentImage]}
+                src=''
                 alt="iPhone enlarged"
                 className={styles.modalImage}
               />

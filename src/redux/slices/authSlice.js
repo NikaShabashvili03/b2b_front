@@ -5,8 +5,7 @@ import { login, fetchProfile, logout, registerProfile } from '../../api/auth';
 const initialState = {
     user: null,
     status: 'idle',
-  };
-  
+};
 
 export const loginUser = createAsyncThunk(
   'auth/loginUser',
@@ -72,7 +71,7 @@ const authSlice = createSlice({
     },
     clearSucces: (state) => {
       state.error = null;
-    },
+    }
   },
   extraReducers: (builder) => {
     builder

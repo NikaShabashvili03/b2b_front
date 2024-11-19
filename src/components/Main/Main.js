@@ -38,7 +38,7 @@ const Main = () => {
               <Link to="/"><img src={GME} width="65px" height="65px" alt="Logo" /></Link>
             </div>
             <ul className={`${styles.links} ${isMenuOpen ? styles.show : ''}`}>
-              <li><Link to="/products">Products</Link></li>
+              <li><Link to="/">Products</Link></li>
               <li><Link to="/contact">Contact</Link></li>
               <li><Link to="/about">About Us</Link></li>
             </ul>

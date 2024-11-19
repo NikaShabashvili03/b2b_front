@@ -16,6 +16,8 @@ export const fetchProductOneById = createAsyncThunk(
         const response = await fetchProductById({
           productId: productId
         });
+
+        console.log(response)
         
         return response;
       } catch (error) {

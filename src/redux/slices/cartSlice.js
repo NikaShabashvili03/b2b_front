@@ -1,12 +1,27 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { addCart, fetchCart } from '../../api/cart'
+import { addCart, fetchCart, removeCart } from '../../api/cart'
 
 const initialState = {
-    data: null,
+    data: [],
     length: 0,
     status: 'idle',
 };
   
+
+export const removeFromCart = createAsyncThunk(
+  'cart/removeFromCart',
+  async ({ id }, { rejectWithValue }) => {
+    try {
+      const response = await removeCart({
+        id: id
+      })
+
+      return response
+    } catch (error) {
+      return rejectWithValue(error.response?.data.message);
+    }
+  }
+)
 
 export const addOnCart = createAsyncThunk(
     'cart/addCart',
@@ -16,6 +31,7 @@ export const addOnCart = createAsyncThunk(
           productId: productId,
           quantity: quantity
         });
+
   
         return response.user;
       } catch (error) {
@@ -41,7 +57,7 @@ const cartSlice = createSlice({
       })
       .addCase(fetchCartProducts.fulfilled, (state, action) => {
         state.status = 'succeeded'
-        state.length = action.payload?.cartItems && action.payload.cartItems.length
+        state.length = state.data ? state.data.length : 0;
         state.data = action.payload;
       })
       .addCase(fetchCartProducts.rejected, (state, action) => {
@@ -52,10 +68,20 @@ const cartSlice = createSlice({
       })
       .addCase(addOnCart.fulfilled, (state, action) => {
         state.status = 'succeeded'
-        state.length = action.payload?.cartItems && action.payload.cartItems.length
+        state.length = state.data ? state.data.length : 0;
         state.data = action.payload;
       })
       .addCase(addOnCart.rejected, (state, action) => {
+        state.status = 'failed'
+      })
+      .addCase(removeFromCart.pending, (state, action) => {
+        state.status = 'loading'
+      })
+      .addCase(removeFromCart.fulfilled, (state, action) => {
+        state.status = 'succeeded'
+        // state.data.cartItems = state?.data?.cartItems?.filter((item) => item.productId === action.payload.productId);
+      })
+      .addCase(removeFromCart.rejected, (state, action) => {
         state.status = 'failed'
       })
   },
