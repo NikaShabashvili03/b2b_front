@@ -2,23 +2,14 @@ import React from "react";
 import { jsPDF } from "jspdf";
 import "jspdf-autotable"; // Import the plugin for table support
 
-function InvoiceDownload() {
-  const invoiceData = {
-    invoiceNumber: "#12345",
-    issueDate: "11/08/2024",
-    dueDate: "11/22/2024",
-    client: {
-      name: "John Doe",
-      address: "123 Main Street",
-      cityStateZip: "City, State, ZIP",
-    },
-    items: [
-      { item: "001", description: "Web Development Services", quantity: "10 hours", unitPrice: 50.0, total: 500.0 },
-      { item: "002", description: "Website Hosting", quantity: "1 year", unitPrice: 120.0, total: 120.0 },
-    ],
-    totalAmountDue: 620.0,
-  };
-
+function InvoiceDownload({
+  invoiceNumber,
+  issueDate,
+  dueDate,
+  user,
+  data,
+  totalAmountDue
+}) {
   const generatePDF = () => {
     const doc = new jsPDF();
 
@@ -29,24 +20,24 @@ function InvoiceDownload() {
     
     doc.setFontSize(12);
     doc.setTextColor(0, 0, 0);
-    doc.text(`Invoice No: ${invoiceData.invoiceNumber}`, 14, 30);
-    doc.text(`Issued on: ${invoiceData.issueDate}`, 14, 36);
-    doc.text(`Due Date: ${invoiceData.dueDate}`, 14, 42);
+    doc.text(`Invoice No: ${invoiceNumber}`, 14, 30);
+    doc.text(`Issued on: ${issueDate}`, 14, 36);
+    doc.text(`Due Date: ${dueDate}`, 14, 42);
 
     // Client Info
     doc.text("Pay to the order of:", 14, 52);
-    doc.text(invoiceData.client.name, 14, 58);
-    doc.text(invoiceData.client.address, 14, 64);
-    doc.text(invoiceData.client.cityStateZip, 14, 70);
+    doc.text(user.name, 14, 58);
+    // doc.text(invoiceData.user.address, 14, 64);
+    // doc.text(invoiceData.user.cityStateZip, 14, 70);
 
     // Table for items~
-    const tableColumn = ["Item", "Description", "Quantity", "Unit Price", "Total"];
-    const tableRows = invoiceData.items.map((item) => [
-      item.item,
-      item.description,
+    const tableColumn = ["Id", "Name", "Quantity", "Unit Price", "Total"];
+    const tableRows = data.map((item) => [
+      item.product.prod_id,
+      item.product.name,
       item.quantity,
-      `$${item.unitPrice.toFixed(2)}`,
-      `$${item.total.toFixed(2)}`,
+      `$${item.product.discountedPrice}`,
+      `$${item.totalPrice}`,
     ]);
 
     // Add the table to the PDF
@@ -64,7 +55,7 @@ function InvoiceDownload() {
     doc.setFontSize(12);
     doc.text("Total Amount Due:", 100, finalY);
     doc.setFont("helvetica", "bold");
-    doc.text(`$${invoiceData.totalAmountDue.toFixed(2)}`, 160, finalY);
+    doc.text(`$${totalAmountDue.toFixed(2)}`, 160, finalY);
 
     // Footer with Thank You Note
     doc.setFont("helvetica", "normal");
@@ -75,12 +66,12 @@ function InvoiceDownload() {
     doc.text("Bank Account Number: 123456789 | Routing Number: 987654321", 14, finalY + 32);
 
     // Save the PDF
-    doc.save(`Invoice_${invoiceData.invoiceNumber}.pdf`);
+    doc.save(`Invoice_${invoiceNumber}.pdf`);
   };
 
   return (
     <div>
-      <button onClick={generatePDF}>Download Invoice as PDF</button>
+      <button onClick={generatePDF}>Sale</button>
     </div>
   );
 }
