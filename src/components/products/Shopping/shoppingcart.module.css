@@ -133,6 +133,21 @@ input[type="number"]:focus {
     transform: translateY(-2px);
 }
 
+.quantityContainer{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.plusButton {
+    background-color: #dc3545;
+    color: white; 
+    border: none;
+    padding: 2px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 23px;
+    transition: background-color 0.3s, transform 0.3s;
+}
 
 @media (max-width: 768px) {
     .title {
@@ -193,3 +208,4 @@ input[type="number"]:focus {
         width: 93.7%; 
     }
 }
+

@@ -18,7 +18,6 @@ const Products = () => {
   const [queryParams, updateQueryParams] = useQueryParams();
   const dispatch = useDispatch()
 
-  console.log(products)
   const handleSubCategoryChange = ({ _id }) => {
     updateQueryParams({ subcategory: _id });
   };
@@ -30,10 +29,13 @@ const Products = () => {
       page: queryParams.page
     }))
 
+  }, [dispatch, categoryId, queryParams])
+
+  useEffect(() => {
     dispatch(fetchSubCategories({
       categoryId: categoryId
     }))
-  }, [dispatch, categoryId, queryParams])
+  }, [categoryId, dispatch])
 
   return (
     <div className={styles.container}>
@@ -41,9 +43,6 @@ const Products = () => {
         <div className={styles.sidebar}>
           
           <h3 className={styles.sidebarTitle}>ქვეკატეგორიები</h3>
-
-          {/* <button className="filtero">filter</button>
-          <button className="cart" onClick={toggleCartVisibility}>cart</button> */}
           <button onClick={() => {
             updateQueryParams({ subcategory: null })
           }} className="filtero">Clear Filter</button>

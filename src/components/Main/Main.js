@@ -9,8 +9,9 @@ const Main = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isAuth = localStorage.getItem("password") === "1";
   const dispatch = useDispatch()
-  const cartLength = useSelector((state) => state.cart.length);
+  const { data } = useSelector((state) => state.cart);
 
+  console.log(data)
   useEffect(() => {
     dispatch(fetchCartProducts())
   }, [dispatch])
@@ -52,7 +53,7 @@ const Main = () => {
                 </select>
                 <Link to="/cart" className={styles.favorite}>
                   <i className="fa-solid fa-cart-shopping"></i>
-                  <p className={styles.cartLength}>{cartLength}</p>
+                  <p className={styles.cartLength}>{data.length}</p>
                 </Link>
                 <Link to="/profile" className={styles.profileIcon}><i className="fa-regular fa-user"></i></Link>
               </div>

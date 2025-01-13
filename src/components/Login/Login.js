@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { loginUser } from '../../redux/slices/authSlice';
 import { useAuth } from '../../context/AuthContext';
+import toast from 'react-hot-toast';
 
 const Login = () => {
     const [email, setEmail] = useState("");
@@ -14,6 +15,10 @@ const Login = () => {
         login({
             email: email,
             password: password
+        }).then((res) => {
+            if(res?.error) return toast.error("Something went wrong")
+            console.log(res)
+            toast.success("Login Successed")
         })
     }
 

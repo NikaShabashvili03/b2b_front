@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import styles from './RegistrationForm.module.css'; // Import the CSS module
 import { useAuth } from '../../context/AuthContext';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import toast from 'react-hot-toast';
 
 const RegistrationForm = () => {
   const { register } = useAuth();
-  
+  const navigate = useNavigate()
   const [data, setData] = useState({
     company: "",
     position: "", 
@@ -27,7 +28,8 @@ const RegistrationForm = () => {
   };
 
   const onSubmit = () => {
-    if (data.password !== data.rePassword) return alert("გაიმეორეთ პაროლი სწორად");
+    if (data.password !== data.rePassword) return toast.error("გაიმეორეთ პაროლი სწორად");
+    console.log(data)
     register({
       company: data.company,
       position: data.position,
@@ -37,7 +39,11 @@ const RegistrationForm = () => {
       phone: data.phone,
       email: data.email,
       password: data.password,
-    });
+    }).then((res) => {
+      if(res?.error) return toast.error("Something went wrong")
+      toast.success("Register Successed")
+      navigate("/login")
+  });
   }
 
   return (

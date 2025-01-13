@@ -16,8 +16,6 @@ export const fetchProductOneById = createAsyncThunk(
         const response = await fetchProductById({
           productId: productId
         });
-
-        console.log(response)
         
         return response;
       } catch (error) {
@@ -39,7 +37,7 @@ const productsSlice = createSlice({
       })
       .addCase(fetchProductOneById.fulfilled, (state, action) => {
         state.status = 'succeeded'
-        state.data = action.payload;
+        state.data = action.payload.product;
         state.error = null;
         state.success = null;
       })

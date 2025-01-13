@@ -30,7 +30,6 @@ export const fetchUserProfile = createAsyncThunk('auth/fetchUserProfile', async 
 });
 
 export const logoutUser = createAsyncThunk('auth/logoutUser', async () => {
-  await logout();
   window.localStorage.removeItem("token")
 });
 

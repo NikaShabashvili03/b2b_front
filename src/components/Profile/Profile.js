@@ -5,6 +5,7 @@ import companyProfilePhoto from '../../assets/Gm.png';
 import penIcon from '../../assets/pen-solid.svg';
 import cameraIcon from '../../assets/camera-solid.svg';
 import { useAuth } from '../../context/AuthContext';
+import { useDispatch } from 'react-redux';
 
 function Profile() {
   const { user } = useAuth();
@@ -22,7 +23,8 @@ function Profile() {
   const [currentText, setCurrentText] = useState('');
   const [imageFile, setImageFile] = useState(null);
   const [burgerOpen, setBurgerOpen] = useState(false);
-
+  const { logout } = useAuth()
+  
   const handleImageChange = (event) => {
     setImageFile(URL.createObjectURL(event.target.files[0]));
   };
@@ -120,6 +122,11 @@ function Profile() {
             onClick={() => setSelectedCategory('security')}
           >
             დაცვა
+          </li>
+          <li
+            onClick={() => logout()}
+          >
+            გამოსვლა
           </li>
         </ul>
       </div>

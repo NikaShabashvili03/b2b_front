@@ -3,7 +3,6 @@ import { addCart, fetchCart, removeCart } from '../../api/cart'
 
 const initialState = {
     data: [],
-    length: 0,
     status: 'idle',
 };
   
@@ -33,7 +32,7 @@ export const addOnCart = createAsyncThunk(
         });
 
   
-        return response.user;
+        return response;
       } catch (error) {
         return rejectWithValue(error.response?.data.message);
       }
@@ -57,8 +56,7 @@ const cartSlice = createSlice({
       })
       .addCase(fetchCartProducts.fulfilled, (state, action) => {
         state.status = 'succeeded'
-        state.length = state.data ? state.data.length : 0;
-        state.data = action.payload;
+        state.data = action.payload.cart;
       })
       .addCase(fetchCartProducts.rejected, (state, action) => {
         state.status = 'failed'
@@ -68,8 +66,7 @@ const cartSlice = createSlice({
       })
       .addCase(addOnCart.fulfilled, (state, action) => {
         state.status = 'succeeded'
-        state.length = state.data ? state.data.length : 0;
-        state.data = action.payload;
+        state.data = action.payload.cart;
       })
       .addCase(addOnCart.rejected, (state, action) => {
         state.status = 'failed'

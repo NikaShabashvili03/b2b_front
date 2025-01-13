@@ -28,7 +28,7 @@ export const AuthProvider = ({ children }) => {
     email, 
     password,
   }) => {
-    await dispatch(fetchUserRegister({ 
+    const data = await dispatch(fetchUserRegister({ 
       company,
       position, 
       identify, 
@@ -38,10 +38,12 @@ export const AuthProvider = ({ children }) => {
       email, 
       password,
     }))
+    return data
   }
 
   const login = async ({ email, password }) => {
-    await dispatch(loginUser({ email, password }));
+    const data = await dispatch(loginUser({ email, password }));
+    return data
   };
 
   const logout = async () => {
