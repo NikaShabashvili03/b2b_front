@@ -47,6 +47,8 @@ const Product = () => {
     }))
   }
 
+  console.log(data)
+
   return (
     <div className={styles.biggestBox}>
       <div className={styles.productContainer}>
@@ -71,7 +73,7 @@ const Product = () => {
           </div>
 
           <div className={styles.priceBox}>
-            <h2>{data?.finalPrice} GEL {data.finalPrice !== data.oldPrice && <sup><s>{data?.oldPrice} GEL</s></sup>}</h2>
+            <h2>{data?.finalPrice} GEL {data?.finalPrice !== data?.oldPrice && <sup><s>{data?.oldPrice} GEL</s></sup>}</h2>
             <div className={styles.buttonContainer}>
               <button onClick={onHandleAddCart} className={styles.cartButton}>კალათაში დამატება</button>
             </div>
