@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom"; 
 import styles from "./products.module.css";
-import IMG1 from "../../../assets/1707289109360.png";
-import IMG2 from "../../../assets/1713416670393.png";
 import { RiShoppingCart2Line } from "react-icons/ri";
 import { FaCheck } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
@@ -20,7 +18,9 @@ const Products = () => {
 
   const handleSubCategoryChange = ({ _id }) => {
     updateQueryParams({ subcategory: _id });
-  };
+  };  
+
+  console.log(products.data)
 
   useEffect(() => {
     dispatch(fetchProducts({
@@ -54,7 +54,7 @@ const Products = () => {
             )
             : (
               <ul className={styles.categoryList}>
-                {subCategories.data && subCategories.data.map((subCategory, index) => (
+                {subCategories?.data && subCategories?.data?.map((subCategory, index) => (
                   <li 
                     key={index} 
                     className={`${styles.categoryItem}`} 
@@ -80,7 +80,7 @@ const Products = () => {
                 <ul className={styles.dropdownMenu}>
                   {["თარიღი ზრდადი", "თარიღი კლებადი", "ფასი ზრდადი", "ფასი კლებადი", "ახალი"].map((option) => (
                     <li key={option}>
-                      {/* <button onClick={() => handleSortChange(option)}>{option}</button> */}
+                      <button>{option}</button>
                     </  li>
                   ))}
                 </ul>
@@ -92,7 +92,7 @@ const Products = () => {
         <div className={styles.list}>
             {products.status === 'loading' 
               ? [1,2,3,4,5].map((item) => (
-                <div className={styles.item} style={{background: 'gray'}}>
+                <div key={item} className={styles.item} style={{background: 'gray'}}>
                   
                 </div>
               ))
@@ -111,7 +111,7 @@ const Products = () => {
                           {/* {!product.isNew && <span className={styles.newLabel}> ახალი </span>} */}
                         </div>
                       </Link>
-                      <div className={styles.price}>{product.totalPrice}ლ</div>
+                      <div className={styles.price}>{product.finalPrice}ლ {parseInt(product.finalPrice) !== parseInt(product.oldPrice) && <sup><del>{product.oldPrice}</del>ლ</sup>}</div>
                       {/* <div className={styles.date}>{new Date(product.createdAt).toISOString().split("T")[0]}</div> */}
                       <div className={`${styles.stockStatus} ${product.quantity > 0 ? styles.inStock : styles.outOfStock}`}>
                         {product.quantity > 0 ? (

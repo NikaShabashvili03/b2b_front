@@ -17,7 +17,6 @@ const Login = () => {
             password: password
         }).then((res) => {
             if(res?.error) return toast.error("Something went wrong")
-            console.log(res)
             toast.success("Login Successed")
         })
     }
@@ -31,7 +30,7 @@ const Login = () => {
                     }} className={styles['login-form']}>
                     <h2>Login</h2>
                     <div className={styles['input-group']}>
-                        <label>Username</label>
+                        <label>Email</label>
                         <input value={email} onChange={(e) => setEmail(e.target.value)} type="text" id="username" name="username" required="" />
                     </div>
                     <div className={styles['input-group']}>

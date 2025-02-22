@@ -3,13 +3,21 @@ import styles from "./payment.module.css";
 import ExportToXls from "./ExportToXls"
 import { useSelector } from "react-redux";
 import { useAuth } from "../../../context/AuthContext";
+function generateAlphanumericID() {
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    let id = '';
+    for (let i = 0; i < 8; i++) {
+        id += chars[Math.floor(Math.random() * chars.length)];
+    }
+    return id;
+}
 
 const Payment = () => {
     const { data } = useSelector((state) => state.cart)
     const { user } = useAuth()
-    let issuedDate = `${new Date().getDate()}/${new Date().getMonth()+4}/${new Date().getFullYear()}`
-    let dueDate = `${new Date().getDate()}/${new Date().getMonth()+1}/${new Date().getFullYear()}`
-    let invoiceNumber = "12345"
+    let issuedDate = `${new Date().getDate()}/${new Date().getMonth()+1}/${new Date().getFullYear()}`
+    let dueDate = `${new Date().getDate()}/${new Date().getMonth()+4}/${new Date().getFullYear()}`
+    let invoiceNumber = generateAlphanumericID()
     const totalDiscountedAmount = data?.reduce((acc, item) => acc + parseInt(item.totalPrice), 0);
     
     return (

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import styles from './shoppingcart.module.css';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
@@ -27,7 +27,7 @@ const Shoppingcart = () => {
   }
   
 
-  const totalAmount = cart?.data?.reduce((acc, item) => acc + parseInt(item.totalPrice), 0);
+  const totalAmount = cart?.data?.reduce((acc, item) => acc + parseInt(item.product.originalPrice * item.quantity), 0);
   const totalDiscountedAmount = cart?.data?.reduce((acc, item) => acc + parseInt(item.totalPrice), 0);
 
   return (
@@ -41,7 +41,7 @@ const Shoppingcart = () => {
               <img src={item.image} alt={item.name} className={styles.productImage} />
               <div className={styles.itemDetails}>
                 <h3>{item.product.name}</h3>
-                <p>Price: {parseInt(item.totalPrice)}ლ <sup><del>{item.totalPrice}</del>ლ</sup></p>
+                <p>Price: {parseInt(item.totalPrice)}ლ {item.product.originalPrice * item.quantity !== item.totalPrice && <sup><del>{item.product.originalPrice * item.quantity}</del>ლ</sup>}</p>
                 <p>Serial Number: {item.product.prod_id}</p> 
                 <div className={styles.quantityContainer}>
                   <button onClick={() => onHandleAddQuantity(item.product.id, -1)} className={styles.plusButton}>-</button>

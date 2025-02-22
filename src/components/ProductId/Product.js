@@ -8,6 +8,10 @@ import { fetchProductOneById } from '../../redux/slices/productByIdSlice';
 import { useParams } from 'react-router-dom';
 import { addOnCart } from '../../redux/slices/cartSlice';
 
+function isEmpty(obj) {
+  return Object.keys(obj).length === 0;
+}
+
 const Product = () => {
   const { productId } = useParams();
   const [currentImage, setCurrentImage] = useState(0);
@@ -15,6 +19,7 @@ const Product = () => {
   const dispatch = useDispatch()
   const { data, status } = useSelector((state) => state.productById)
 
+  console.log(data)
   useEffect(() => {
     dispatch(fetchProductOneById({
       productId: productId
@@ -47,7 +52,6 @@ const Product = () => {
     }))
   }
 
-  console.log(data)
 
   return (
     <div className={styles.biggestBox}>
@@ -98,99 +102,16 @@ const Product = () => {
       {/* Detailed Info Section */}
       <div className={styles.detailedInfo}>
         <h3>დეტალური ინფორმაცია</h3>
+        {isEmpty(data.attributes) && "არცერთი ატრიბუტი არ მოიძებნა"}
 
-        <div className={styles.specItem}>
-          <span className={styles.specLabel}>ეკრანის ზომა</span>
-          <span className={styles.specValue}>6.1 inches</span>
-        </div>
+        {!isEmpty(data.attributes) && Object.entries(data.attributes).map(([key, value]) => ( 
+          <div className={styles.specItem}>
+            <span className={styles.specLabel}>{key}</span>
+            <span className={styles.specValue}>{value}</span>
+          </div>
+        ))}
 
-        <div className={styles.specItem}>
-          <span className={styles.specLabel}>რეზოლუცია</span>
-          <span className={styles.specValue}>FHD+</span>
-        </div>
 
-        <div className={styles.specItem}>
-          <span className={styles.specLabel}>განახლების სიხშირე</span>
-          <span className={styles.specValue}>60 Hz</span>
-        </div>
-
-        <div className={styles.specItem}>
-          <span className={styles.specLabel}>ეკრანის სიკაშკაშე</span>
-          <span className={styles.specValue}>2000 nits</span>
-        </div>
-
-        <div className={styles.specItem}>
-          <span className={styles.specLabel}>ეკრანის ტიპი</span>
-          <span className={styles.specValue}>Super Retina XDR OLED</span>
-        </div>
-
-        <div className={styles.specItem}>
-          <span className={styles.specLabel}>ეკრანის დაცვა</span>
-          <span className={styles.specValue}>Ceramic Shield</span>
-        </div>
-
-        <h4>ტექნიკური მახასიათებლები</h4>
-
-        <div className={styles.specItem}>
-          <span className={styles.specLabel}>SIM</span>
-          <span className={styles.specValue}>e-SIM</span>
-        </div>
-
-        <div className={styles.specItem}>
-          <span className={styles.specLabel}>5G</span>
-          <span className={styles.specValue}>Yes</span>
-        </div>
-
-        <div className={styles.specItem}>
-          <span className={styles.specLabel}>კორპუსი</span>
-          <span className={styles.specValue}>Glass, Aluminum</span>
-        </div>
-
-        <div className={styles.specItem}>
-          <span className={styles.specLabel}>IP დაცვა</span>
-          <span className={styles.specValue}>IP68</span>
-        </div>
-
-        <div className={styles.specItem}>
-          <span className={styles.specLabel}>ჩიპსეტი</span>
-          <span className={styles.specValue}>A18</span>
-        </div>
-
-        <h4>მეხსიერება</h4>
-
-        <div className={styles.specItem}>
-          <span className={styles.specLabel}>შიდა მეხსიერება</span>
-          <span className={styles.specValue}>128 GB</span>
-        </div>
-
-        <div className={styles.specItem}>
-          <span className={styles.specLabel}>ოპერატიული მეხსიერება</span>
-          <span className={styles.specValue}>8 GB</span>
-        </div>
-
-        <h4>კამერა</h4>
-
-        <div className={styles.specItem}>
-          <span className={styles.specLabel}>ძირითადი კამერა</span>
-          <span className={styles.specValue}>48 MP</span>
-        </div>
-
-        <div className={styles.specItem}>
-          <span className={styles.specLabel}>წინა კამერა</span>
-          <span className={styles.specValue}>12 MP</span>
-        </div>
-
-        <h4>პორტები</h4>
-
-        <div className={styles.specItem}>
-          <span className={styles.specLabel}>3.5mm</span>
-          <span className={styles.specValue}>No</span>
-        </div>
-
-        <div className={styles.specItem}>
-          <span className={styles.specLabel}>დასამუხტი პორტი</span>
-          <span className={styles.specValue}>Type-C</span>
-        </div>
       </div>
     </div>
   );

@@ -29,7 +29,6 @@ const RegistrationForm = () => {
 
   const onSubmit = () => {
     if (data.password !== data.rePassword) return toast.error("გაიმეორეთ პაროლი სწორად");
-    console.log(data)
     register({
       company: data.company,
       position: data.position,

@@ -11,7 +11,6 @@ const Main = () => {
   const dispatch = useDispatch()
   const { data } = useSelector((state) => state.cart);
 
-  console.log(data)
   useEffect(() => {
     dispatch(fetchCartProducts())
   }, [dispatch])

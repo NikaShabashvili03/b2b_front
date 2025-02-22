@@ -76,7 +76,7 @@ const cartSlice = createSlice({
       })
       .addCase(removeFromCart.fulfilled, (state, action) => {
         state.status = 'succeeded'
-        // state.data.cartItems = state?.data?.cartItems?.filter((item) => item.productId === action.payload.productId);
+        state.data = state?.data?.filter((item) => item.product.id !== action.payload.productId)
       })
       .addCase(removeFromCart.rejected, (state, action) => {
         state.status = 'failed'
